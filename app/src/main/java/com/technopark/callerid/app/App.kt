@@ -52,10 +52,9 @@ class App : Application() {
             applicationContext,
             AppDatabase::class.java, "room_database"
         )
-           // .allowMainThreadQueries()  только для тестирования
+            // .allowMainThreadQueries()  только для тестирования
             .build()
     }
-
 
     private fun tryDownloadDBFromfirebase() {
         val df: DateFormat = SimpleDateFormat("dd/MM/yy", Locale.US)
@@ -87,8 +86,5 @@ class App : Application() {
             }
         }
     }
-
     //public fun getDataBase(): DatabaseHelper = db
-
-
 }

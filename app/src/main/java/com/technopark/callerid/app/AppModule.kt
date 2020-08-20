@@ -7,5 +7,4 @@ import dagger.Module
 class AppModule(_application: Application) {
 
     private var application: Application = _application
-
 }
