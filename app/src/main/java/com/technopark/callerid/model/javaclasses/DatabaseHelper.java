@@ -1,4 +1,4 @@
-package com.technopark.callerid.model;
+package com.technopark.callerid.model.javaclasses;
 
 import android.content.ContentValues;
 import android.content.Context;
