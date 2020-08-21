@@ -8,6 +8,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 
+//Скорее всего класса вообще не будет, висит для тестов
 class MainPresenter {
     var spamerDao: SpamerDao = App.getAppDatabase().spamerDao()
 
