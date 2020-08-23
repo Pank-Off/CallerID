@@ -3,16 +3,15 @@ package com.technopark.callerid.app
 import android.app.Application
 import android.content.SharedPreferences
 import androidx.room.Room
-import com.technopark.callerid.model.javaclasses.FireBaseWorker
-
+import com.technopark.callerid.model.FirebaseWorker
+import com.technopark.callerid.model.room.AppDatabase
 import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.*
-import com.technopark.callerid.model.room.AppDatabase
 
 class App : Application() {
 
-    private lateinit var fireBaseWorker: FireBaseWorker
+    private lateinit var firebaseWorker: FirebaseWorker
     // private lateinit var db: DatabaseHelper
 
     companion object {
@@ -65,22 +64,16 @@ class App : Application() {
 
         if (sharedPreferences.getBoolean("firstRun", true)) {
             sharedPreferences.edit().putBoolean("firstRun", false).apply()
-            fireBaseWorker =
-                FireBaseWorker(
-                    applicationContext
-                )
-            fireBaseWorker.download()
+            firebaseWorker = FirebaseWorker(applicationContext)
+            firebaseWorker.download()
 
             sharedPreferences.edit().putString(dateTimeKey, currentDate).apply()
             sharedPreferences.edit().apply()
         } else {
             val lastUpdateDate = sharedPreferences.getString(dateTimeKey, currentDate)
             if (currentDate != lastUpdateDate) {
-                fireBaseWorker =
-                    FireBaseWorker(
-                        applicationContext
-                    )
-                fireBaseWorker.download()
+                firebaseWorker = FirebaseWorker(applicationContext)
+                firebaseWorker.download()
                 sharedPreferences.edit().putString(dateTimeKey, currentDate).apply()
                 sharedPreferences.edit().apply()
             }
