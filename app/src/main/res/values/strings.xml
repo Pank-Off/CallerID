@@ -1,4 +1,5 @@
 <resources>
+    <string name="app_name" translatable="false">CallerID</string>
     <string name="Call">Call</string>
     <string name="input_number">Input number</string>
     <string name="add">Add</string>
