@@ -74,12 +74,7 @@ class SettingsFragment : Fragment(), SettingsView {
 
     private fun setOnShareBtnClickListener() {
         shareButton.setOnClickListener {
-            val intent: Intent = Intent(Intent.ACTION_SEND)
-            intent.type = "text/plain"
-            val shareBody = "Hi! I'm using Caller ID!"
-            val shareSub = "Share sub"
-            intent.putExtra(Intent.EXTRA_SUBJECT, shareSub)
-            intent.putExtra(Intent.EXTRA_TEXT, shareBody)
+            val intent: Intent = settingsPresenter.setOnShareBtnClickListener()
             startActivity(Intent.createChooser(intent, "Share using"))
         }
     }
