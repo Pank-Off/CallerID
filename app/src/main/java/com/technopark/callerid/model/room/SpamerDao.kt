@@ -1,5 +1,6 @@
 package com.technopark.callerid.model.room
 
+import android.database.Cursor
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
@@ -13,4 +14,7 @@ interface SpamerDao {
 
     @Query("SELECT * FROM table_spamers")
     fun getAll(): Single<List<Spamer>>
+
+    @Query("SELECT * FROM table_spamers WHERE phoneNumber = :phoneNumber")
+    fun getSingleUserInfo(phoneNumber: String): Cursor
 }

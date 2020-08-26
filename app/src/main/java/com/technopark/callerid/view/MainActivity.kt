@@ -3,6 +3,7 @@ package com.technopark.callerid.view
 import android.content.Context
 import android.content.SharedPreferences
 import android.graphics.drawable.ColorDrawable
+import android.os.Build
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
@@ -24,9 +25,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         initNavBar()
-
         setThemeMode()
-        //val mainPresenter: MainPresenter = MainPresenter()
+        // val mainPresenter: MainPresenter = MainPresenter()
 
         //  mainPresenter.putDataInDB()
         //   Thread.sleep(1000)
@@ -38,11 +38,14 @@ class MainActivity : AppCompatActivity() {
             getSharedPreferences(packageName, Context.MODE_PRIVATE)
         if (sharedPreferences.getBoolean(SettingsFragment.KEY, false)) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-            supportActionBar?.setBackgroundDrawable(ColorDrawable(resources.getColor(R.color.textFieldColor)))
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                supportActionBar?.setBackgroundDrawable(
+                    ColorDrawable(resources.getColor(R.color.textFieldColor, null))
+                )
+            }
         } else {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         }
-
     }
 
     private fun initNavBar() {

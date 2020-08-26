@@ -6,5 +6,5 @@ import androidx.room.RoomDatabase
 @Database(entities = [Spamer::class], version = 1, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
 
-    public abstract fun spamerDao(): SpamerDao
+    abstract fun spamerDao(): SpamerDao
 }

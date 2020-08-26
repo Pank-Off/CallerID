@@ -15,8 +15,8 @@ class Spamer {
     lateinit var comment: String
 
 
-    constructor(comment: String) {
-        this.comment = comment
+    constructor(isSpam: String) {
+        this.isSpam = isSpam
     }
 
 }
