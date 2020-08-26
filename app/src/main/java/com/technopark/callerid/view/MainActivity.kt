@@ -13,7 +13,6 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.technopark.callerid.R
-import com.technopark.callerid.presenter.MainPresenter
 import com.technopark.callerid.view.ui.settings.SettingsFragment
 
 
@@ -26,11 +25,6 @@ class MainActivity : AppCompatActivity() {
 
         initNavBar()
         setThemeMode()
-        // val mainPresenter: MainPresenter = MainPresenter()
-
-        //  mainPresenter.putDataInDB()
-        //   Thread.sleep(1000)
-        //   mainPresenter.getDataFromDB()
     }
 
     private fun setThemeMode() {

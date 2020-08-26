@@ -49,7 +49,7 @@ class SettingsFragment : Fragment(), SettingsView {
     }
 
     private fun setOnSwitchCheckedChangeListener() {
-        darkMode.setOnCheckedChangeListener { buttonView, isChecked ->
+        darkMode.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
                 text.setText(R.string.dark_mode_is_enabled)
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)

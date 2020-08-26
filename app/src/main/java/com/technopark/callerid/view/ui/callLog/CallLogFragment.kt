@@ -32,10 +32,11 @@ class CallLogFragment : Fragment(), CallLogView {
     private lateinit var sad_emotion: ImageView
     private lateinit var allowBtn: Button
 
-    //    private val mDatabaseHelper: DatabaseHelper = App.getInstance().getDataBase()
-    val EXTRA_NUMBER = "EXTRA_NUMBER"
-    val EXTRA_NAME = "EXTRA_NAME"
-    val EXTRA_ICON = "EXTRA_ICON"
+    companion object {
+        val EXTRA_NUMBER = "EXTRA_NUMBER"
+        val EXTRA_NAME = "EXTRA_NAME"
+        val EXTRA_ICON = "EXTRA_ICON"
+    }
 
     // Request code for READ_CALL_LOG. It can be any number > 0.
     private val PERMISSIONS_REQUEST_READ_CALL_LOG = 100
@@ -96,7 +97,6 @@ class CallLogFragment : Fragment(), CallLogView {
             )
             Log.d("Coroutine", Thread.currentThread().name)
             contactsList.addItemDecoration(mDividerItemDecoration)
-
             val adapter = PhoneAdapter(contacts, object : OnItemClickListener {
                 override fun onClick(position: Int) {
                     // получаем выбранный пункт
@@ -105,6 +105,11 @@ class CallLogFragment : Fragment(), CallLogView {
                         context, "Был выбран пункт " + selectedContact.getName(),
                         Toast.LENGTH_SHORT
                     ).show()
+                    val intent = Intent(activity, DetailActivity::class.java)
+                    intent.putExtra(EXTRA_NAME, selectedContact.getName())
+                    intent.putExtra(EXTRA_NUMBER, selectedContact.getNumber())
+                    intent.putExtra(EXTRA_ICON, selectedContact.getIcon())
+                    startActivity(intent)
                 }
             })
             contactsList.adapter = adapter
@@ -136,8 +141,8 @@ class CallLogFragment : Fragment(), CallLogView {
                 Manifest.permission.READ_CALL_LOG
             ) != PackageManager.PERMISSION_GRANTED)
         ) {
-            Log.d("onResume", "onResume")
-            //showContacts()
+            Log.d(Thread.currentThread().name, "onResume")
+            // showContacts()
         }
     }
 }

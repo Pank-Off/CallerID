@@ -51,7 +51,7 @@ class App : Application() {
             applicationContext,
             AppDatabase::class.java, "room_database"
         )
-            // .allowMainThreadQueries()  только для тестирования
+            // .allowMainThreadQueries()  //только для тестирования
             .build()
     }
 

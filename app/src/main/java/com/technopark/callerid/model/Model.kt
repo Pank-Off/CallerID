@@ -5,19 +5,19 @@ import com.technopark.callerid.R
 import com.technopark.callerid.view.ui.callLog.PhoneBook
 import me.everything.providers.android.calllog.Call
 import me.everything.providers.android.calllog.CallsProvider
-import java.util.function.UnaryOperator
 
 class Model {
 
-    private val phoneBooks: ArrayList<PhoneBook> = ArrayList()
+    private val phoneBooks = arrayListOf<PhoneBook>()
     private val mDatabaseHelper: DatabaseHelper = DatabaseHelper()
 
     fun setPhoneBooks(context: Context?) {
         phoneBooks.clear()
-        val temp: ArrayList<PhoneBook> = ArrayList()
-        val contacts: ArrayList<String> = ArrayList()
-        val names: ArrayList<String> = ArrayList()
-        val types: ArrayList<Call.CallType> = ArrayList()
+
+        val temp = arrayListOf<PhoneBook>()
+        val contacts = arrayListOf<String>()
+        val names = arrayListOf<String>()
+        val types = arrayListOf<Call.CallType>()
 
         val callsProvider = CallsProvider(context)
         val number: List<Call> = callsProvider.calls.list
@@ -40,15 +40,27 @@ class Model {
     fun getPhoneBooks(): ArrayList<PhoneBook> = phoneBooks
 
     private fun determineType(type: Call.CallType, number: String): Int {
-//        val isSpam: String = mDatabaseHelper.getSingleUserInfo(number)
-//        if (isSpam == "Is spam") {
-//            return R.drawable.bancircle
-//        }
+        val isSpam: String = mDatabaseHelper.getSingleUserInfo(number)
+        if (isSpam == "Is spam") {
+            return R.drawable.bancircle
+        }
         if (type == Call.CallType.INCOMING) {
             return R.drawable.incomming
         } else if (type == Call.CallType.OUTGOING) {
             return R.drawable.outgoing
         }
         return R.drawable.missing
+    }
+
+    fun addRecord(number: String, isSpam: Boolean, comment: String) {
+        mDatabaseHelper.addRecord(number, isSpam, comment)
+    }
+
+    fun removeRecord(number: String) {
+        mDatabaseHelper.removeRecord(number)
+    }
+
+    fun getAllData() {
+        mDatabaseHelper.getData()
     }
 }
