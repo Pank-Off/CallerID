@@ -1,19 +1,31 @@
 package com.technopark.callerid.view.ui.checkNumber
 
+import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
+import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.google.android.material.button.MaterialButton
+import com.google.android.material.textfield.TextInputEditText
 import com.technopark.callerid.R
+import com.technopark.callerid.model.FirebaseWorker
 import com.technopark.callerid.presenter.CheckNumberPresenter
+import kotlinx.coroutines.*
 
-//Здесь рабочая пока одна кнопка, для проверки что база работает
 class CheckNumberFragment : Fragment(), CheckNumberView {
+    private lateinit var appContext: Context
     private lateinit var checkNumberPresenter: CheckNumberPresenter
-    private lateinit var button: MaterialButton
+    private lateinit var checkBtn: MaterialButton
+    private lateinit var numberOfPhoneEditText: TextInputEditText
+    private lateinit var isSpamTextfield: TextView
+    private var validNumber: Boolean = false
+    private lateinit var updateDB: MaterialButton
+    private lateinit var fireBaseWorker: FirebaseWorker
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -26,9 +38,65 @@ class CheckNumberFragment : Fragment(), CheckNumberView {
         super.onViewCreated(view, savedInstanceState)
         checkNumberPresenter = CheckNumberPresenter(this)
 
-        button = view.findViewById(R.id.checkBtn)
-        button.setOnClickListener {
-            checkNumberPresenter.getTest()
+        appContext = requireContext()
+        initViews(view)
+        setOnCheckBtnClickListener()
+
+        setOnUpdateDBClickListener()
+    }
+
+    private fun initViews(view: View) {
+        checkBtn = view.findViewById(R.id.checkBtn)
+        numberOfPhoneEditText = view.findViewById(R.id.numberOfPhone)
+        isSpamTextfield = view.findViewById(R.id.isSpamTextView)
+        updateDB = view.findViewById(R.id.updateDB)
+    }
+
+    private fun setOnCheckBtnClickListener() {
+        checkBtn.setOnClickListener {
+            val number: String = numberOfPhoneEditText.text.toString()
+            checkNumberPresenter.checkValidNumber(context, number)
+            if (validNumber) {
+                Toast.makeText(context, "Good", Toast.LENGTH_LONG).show()
+                GlobalScope.launch(Dispatchers.IO) {
+                    checkNumberPresenter.getSingleUserInfo()
+                }
+            } else {
+                Toast.makeText(context, "notGood", Toast.LENGTH_LONG).show()
+            }
         }
+    }
+
+    private fun setOnUpdateDBClickListener() {
+        updateDB.setOnClickListener {
+            var areUpdate: Boolean = false
+            fireBaseWorker = FirebaseWorker(appContext)
+            Toast.makeText(context, "DataBase are updating...", Toast.LENGTH_LONG).show()
+            GlobalScope.launch(Dispatchers.IO) {
+                areUpdate = fireBaseWorker.download()
+                Log.d(Thread.currentThread().name, "Coroutine")
+            }
+
+            Log.d(Thread.currentThread().name, "Coroutine")
+            if (areUpdate) {
+                //   Toast.makeText(context, "DataBase is updated", Toast.LENGTH_SHORT).show();
+            } else {
+                // Toast.makeText(context, "DataBase is not updated", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+    override fun validNumber() {
+        numberOfPhoneEditText.error = null
+        validNumber = true
+    }
+
+    override fun invalidNumber() {
+        numberOfPhoneEditText.error = "Некорректный ввод"
+        validNumber = false
+    }
+
+    override fun isSpam(isSpam: String) {
+        isSpamTextfield.text = isSpam
     }
 }

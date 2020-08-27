@@ -63,4 +63,8 @@ class Model {
     fun getAllData() {
         mDatabaseHelper.getData()
     }
+
+    fun getSingleUserInfo(number: String): String {
+        return mDatabaseHelper.getSingleUserInfo(number)
+    }
 }
