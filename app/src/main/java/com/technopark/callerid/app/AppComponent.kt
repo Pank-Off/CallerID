@@ -1,9 +1,6 @@
 package com.technopark.callerid.app
 
-import com.technopark.callerid.presenter.CallLogPresenter
-import com.technopark.callerid.presenter.CheckNumberPresenter
-import com.technopark.callerid.presenter.SettingsPresenter
-import com.technopark.callerid.presenter.SpamProtectionPresenter
+import com.technopark.callerid.presenter.*
 import dagger.Component
 import javax.inject.Singleton
 
@@ -15,4 +12,5 @@ interface AppComponent {
     fun inject(settingsPresenter: SettingsPresenter)
     fun inject(checkNumberPresenter: CheckNumberPresenter)
     fun inject(spamProtectionPresenter: SpamProtectionPresenter)
+    fun inject(detailPresenter: DetailPresenter)
 }

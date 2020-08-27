@@ -27,8 +27,7 @@ class CallLogPresenter(var callLogView: CallLogView) {
     fun setOnClickAllowBtnListener(context: Context?): Intent {
         val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-        val uri =
-            Uri.fromParts("package", context?.packageName, null)
+        val uri = Uri.fromParts("package", context?.packageName, null)
         intent.data = uri
         return intent
     }

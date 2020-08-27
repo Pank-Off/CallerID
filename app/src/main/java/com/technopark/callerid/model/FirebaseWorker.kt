@@ -13,8 +13,8 @@ class FirebaseWorker(private val context: Context) {
     private var result = false
 
     fun download(): Boolean {
-        val Path = context.getDatabasePath(nameDB).parent
-        val rootPath: File = File(Path)
+        val path = context.getDatabasePath(nameDB).parent
+        val rootPath: File = File(path)
 
         storageReference = FirebaseStorage.getInstance().reference.child("phoneTable.db")
         if (!rootPath.exists()) {
