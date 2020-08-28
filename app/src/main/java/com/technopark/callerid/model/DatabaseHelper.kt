@@ -19,12 +19,15 @@ class DatabaseHelper() {
     private var spamerDao: SpamerDao = App.getAppDatabase().spamerDao()
 
     fun getSingleUserInfo(number: String): String {
+
         val cursor: Cursor = spamerDao.getSingleUserInfo(number)
+
         var result = ""
         if (cursor.moveToFirst()) {
             val intIsSpam =
                 cursor.getInt(cursor.getColumnIndex(COL3))
             cursor.close()
+            Log.d("ssss", intIsSpam.toString())
             if (intIsSpam == 1) {
                 result = "Is spam"
             }
@@ -35,6 +38,7 @@ class DatabaseHelper() {
             result = "Not found"
         }
         return result
+
     }
 
     fun addRecord(number: String, isSpam: Boolean, comment: String) {
@@ -76,3 +80,4 @@ class DatabaseHelper() {
                     })
     }
 }
+

@@ -1,16 +1,13 @@
 package com.technopark.callerid.model.room
 
 import android.database.Cursor
-import androidx.room.Dao
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.Query
+import androidx.room.*
 import io.reactivex.Single
 
 @Dao
 interface SpamerDao {
 
-    @Insert
+    @Insert //(onConflict = OnConflictStrategy.REPLACE)
     fun insert(spamer: Spamer): Single<Long>
 
     @Query("DELETE FROM table_spamers WHERE phoneNumber = :phoneNumber")
