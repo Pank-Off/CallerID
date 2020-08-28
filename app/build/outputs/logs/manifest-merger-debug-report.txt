@@ -1,0 +1,373 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml:2:1-31:12
+MERGED from [androidx.preference:preference:1.1.1] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/6924406c193bf778edd3cffed1dbfa5e/preference-1.1.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-ui:2.3.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/8217468cfa443e9e899478ef29043bba/navigation-ui-2.3.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.miguelcatalan:materialsearchview:1.4.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/eb812b4ba72c12347199dbf9d1e7f7d5/jetified-materialsearchview-1.4.0/AndroidManifest.xml:2:1-13:12
+MERGED from [com.google.android.material:material:1.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/69e062cc2d18ccdf3b883aab52867547/material-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.dagger:dagger-android-support:2.20] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/395ed47620ab728cd048ba212246fe7e/jetified-dagger-android-support-2.20/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/5c5382387b4ca5b17056aaa9536ca554/appcompat-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core-ktx:1.3.1] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/aee671a49546a0f9b4fbae1c3cf3351e/jetified-core-ktx-1.3.1/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/05e5eb98b0164be621b4d5d2bb972ee4/constraintlayout-1.1.3/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/df61f9801d0761a656fa557c0ccc631a/jetified-viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/639779ce74a9fb42a16dd59470336c4e/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/340de25898f69b8e495514dde1d9620a/jetified-appcompat-resources-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/386fb8c07b5e8af23e949ce74671f6d8/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/67c54faf15db5e1122504319814000cc/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-fragment:2.3.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/a1f863e78ff9b9a021df15aefd056a73/navigation-fragment-2.3.0/AndroidManifest.xml:17:1-24:12
+MERGED from [me.everything:providers-android:1.0.1] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/4fde28b02722ed3e37bcacf9669dc4b1/jetified-providers-android-1.0.1/AndroidManifest.xml:2:1-16:12
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/c9a0f8f4b67d0389b20ab6bcdbe77f5e/lifecycle-extensions-2.2.0/AndroidManifest.xml:17:1-27:12
+MERGED from [com.google.firebase:firebase-storage:19.1.1] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/e5c8a01228cb2bb88aa8e23f108b5aea/jetified-firebase-storage-19.1.1/AndroidManifest.xml:15:1-39:12
+MERGED from [io.michaelrocks:libphonenumber-android:8.12.3] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/046d07a889783567470d3194ff2a2f17/jetified-libphonenumber-android-8.12.3/AndroidManifest.xml:2:1-11:12
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.1] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/a4956249bae80d1a82d7da9945723d4f/jetified-rxandroid-2.1.1/AndroidManifest.xml:15:1-20:12
+MERGED from [androidx.room:room-rxjava2:2.2.5] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/1a69e79e0ba947bc28941cfbc232e164/room-rxjava2-2.2.5/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.room:room-runtime:2.2.5] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/d37875e420f7353468f42b358a91460e/room-runtime-2.2.5/AndroidManifest.xml:17:1-31:12
+MERGED from [com.google.dagger:dagger-android:2.20] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/88bcf70f749dbc06495db1e791af8178/jetified-dagger-android-2.20/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/3b8b2233a490d9c4a8554091327cc066/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/235c404d6975e54514ae0b9c93e20156/jetified-firebase-auth-interop-18.0.0/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/99a7710b87c83cb20253e0c12ec29791/jetified-play-services-base-17.0.0/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.firebase:firebase-common:19.3.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/d859b53ef7d7990d5303e05462266f00/jetified-firebase-common-19.3.0/AndroidManifest.xml:15:1-39:12
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/dd0870aad9c2c982c42f514e90ab3587/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/06e317675190b2cc5c2e2493353a0fe6/jetified-play-services-basement-17.0.0/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.fragment:fragment:1.2.4] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/c7255c9022aec0d5cd48b81aad261f07/fragment-1.2.4/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/df29108619fbb74a4dc5a038b7d648a8/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/cbf2d527edf9332035c7795ad82d80b6/drawerlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/4da429ca8f9bd5d7416837c2c3c0ac70/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.1.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/571bc5ac9756293c1ac8e598765d5b3d/customview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.3.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/fdeb654980ae546831dc6677f56fa34c/transition-1.3.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/c44f228f14f25c97e3c17fbc28c0f76a/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/8efdafc7c8ad0c90b578df4c52fb0b52/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-runtime:2.3.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/58a0b776cb8669fe179f1cc6259093e5/navigation-runtime-2.3.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.1.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/0365d4026b4bb76e7a4a408d12de77a7/jetified-activity-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-common:2.3.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/47a00faa063f50431cc07b3d76d868e2/navigation-common-2.3.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.3.1] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/04a64718dc4d10491216aa5355350294/core-1.3.1/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/597ed01477a97cd720c94ba162f3a183/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/b57739a66096b9ac59e8faffadd60213/versionedparcelable-1.1.0/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/672035ea12805afcb547b209cd29b4fb/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:17:1-32:12
+MERGED from [androidx.lifecycle:lifecycle-service:2.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/885a8e4ff32649b983acfe99d7ae7c49/jetified-lifecycle-service-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/87f2b873e069f07987792aa58a1bb146/lifecycle-runtime-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/2f5c8a828562716537780a828f26d9e6/lifecycle-livedata-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/15e0df2309dbc252d2448731986b7e4b/jetified-lifecycle-viewmodel-savedstate-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/a84f90e85b1273f5d25b3896feedc9cc/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/eb858db69b47c3f8081faa25b1a34341/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/1ad6ab76e2b3e29971179240d4daca94/jetified-savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/be9cd1f8f5221857266f216ee92258a2/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-components:16.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/c75e4b6ff89e52124d0119de2b14272d/jetified-firebase-components-16.0.0/AndroidManifest.xml:15:1-23:12
+MERGED from [androidx.sqlite:sqlite-framework:2.0.1] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/efaf21a38254058d46a1e013db06af43/sqlite-framework-2.0.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite:2.0.1] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/706108e2858782fedd4be6bf5844aa78/sqlite-2.0.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/88df709b0c9d71fe03f32fde55e747a5/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/f18a2669cb032d6b5f7752d7aea9057f/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/7230dd8aa6aefa932cbd4694349c72ef/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/4c73a97f5f28932604ddbb05f82e4243/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/30ebb5f8928bbfb85d2c5e35aec3f011/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [me.everything:providers-core:1.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/cf1803e7156f98a916d42cfc19ca3841/jetified-providers-core-1.0.0/AndroidManifest.xml:2:1-16:12
+INJECTED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml:2:1-31:12
+	package
+		ADDED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml:3:5-38
+		INJECTED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml
+		ADDED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml:2:1-31:12
+		INJECTED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml
+		ADDED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml:2:1-31:12
+		INJECTED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.CALL_PHONE
+ADDED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml:5:5-69
+	android:name
+		ADDED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml:5:22-66
+uses-permission#android.permission.CALL_PRIVILEGED/
+ADDED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml:6:5-75
+	android:name
+		ADDED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml:6:22-72
+uses-permission#android.permission.READ_CALL_LOG
+ADDED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml:7:5-72
+	android:name
+		ADDED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml:7:22-69
+uses-permission#android.permission.READ_CONTACTS
+ADDED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml:8:5-72
+	android:name
+		ADDED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml:8:22-69
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml:9:5-81
+	android:name
+		ADDED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml:9:22-78
+application
+ADDED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml:11:5-29:19
+MERGED from [com.miguelcatalan:materialsearchview:1.4.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/eb812b4ba72c12347199dbf9d1e7f7d5/jetified-materialsearchview-1.4.0/AndroidManifest.xml:11:5-20
+MERGED from [com.miguelcatalan:materialsearchview:1.4.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/eb812b4ba72c12347199dbf9d1e7f7d5/jetified-materialsearchview-1.4.0/AndroidManifest.xml:11:5-20
+MERGED from [com.google.android.material:material:1.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/69e062cc2d18ccdf3b883aab52867547/material-1.2.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/69e062cc2d18ccdf3b883aab52867547/material-1.2.0/AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/05e5eb98b0164be621b4d5d2bb972ee4/constraintlayout-1.1.3/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/05e5eb98b0164be621b4d5d2bb972ee4/constraintlayout-1.1.3/AndroidManifest.xml:9:5-20
+MERGED from [me.everything:providers-android:1.0.1] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/4fde28b02722ed3e37bcacf9669dc4b1/jetified-providers-android-1.0.1/AndroidManifest.xml:11:5-14:19
+MERGED from [me.everything:providers-android:1.0.1] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/4fde28b02722ed3e37bcacf9669dc4b1/jetified-providers-android-1.0.1/AndroidManifest.xml:11:5-14:19
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/c9a0f8f4b67d0389b20ab6bcdbe77f5e/lifecycle-extensions-2.2.0/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/c9a0f8f4b67d0389b20ab6bcdbe77f5e/lifecycle-extensions-2.2.0/AndroidManifest.xml:24:5-25:19
+MERGED from [com.google.firebase:firebase-storage:19.1.1] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/e5c8a01228cb2bb88aa8e23f108b5aea/jetified-firebase-storage-19.1.1/AndroidManifest.xml:29:5-37:19
+MERGED from [com.google.firebase:firebase-storage:19.1.1] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/e5c8a01228cb2bb88aa8e23f108b5aea/jetified-firebase-storage-19.1.1/AndroidManifest.xml:29:5-37:19
+MERGED from [androidx.room:room-runtime:2.2.5] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/d37875e420f7353468f42b358a91460e/room-runtime-2.2.5/AndroidManifest.xml:24:5-29:19
+MERGED from [androidx.room:room-runtime:2.2.5] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/d37875e420f7353468f42b358a91460e/room-runtime-2.2.5/AndroidManifest.xml:24:5-29:19
+MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/235c404d6975e54514ae0b9c93e20156/jetified-firebase-auth-interop-18.0.0/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/235c404d6975e54514ae0b9c93e20156/jetified-firebase-auth-interop-18.0.0/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/99a7710b87c83cb20253e0c12ec29791/jetified-play-services-base-17.0.0/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/99a7710b87c83cb20253e0c12ec29791/jetified-play-services-base-17.0.0/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.firebase:firebase-common:19.3.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/d859b53ef7d7990d5303e05462266f00/jetified-firebase-common-19.3.0/AndroidManifest.xml:25:5-37:19
+MERGED from [com.google.firebase:firebase-common:19.3.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/d859b53ef7d7990d5303e05462266f00/jetified-firebase-common-19.3.0/AndroidManifest.xml:25:5-37:19
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/dd0870aad9c2c982c42f514e90ab3587/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/dd0870aad9c2c982c42f514e90ab3587/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/06e317675190b2cc5c2e2493353a0fe6/jetified-play-services-basement-17.0.0/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/06e317675190b2cc5c2e2493353a0fe6/jetified-play-services-basement-17.0.0/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.core:core:1.3.1] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/04a64718dc4d10491216aa5355350294/core-1.3.1/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.3.1] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/04a64718dc4d10491216aa5355350294/core-1.3.1/AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/b57739a66096b9ac59e8faffadd60213/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/b57739a66096b9ac59e8faffadd60213/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/672035ea12805afcb547b209cd29b4fb/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:24:5-30:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/672035ea12805afcb547b209cd29b4fb/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:24:5-30:19
+MERGED from [me.everything:providers-core:1.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/cf1803e7156f98a916d42cfc19ca3841/jetified-providers-core-1.0.0/AndroidManifest.xml:11:5-14:19
+MERGED from [me.everything:providers-core:1.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/cf1803e7156f98a916d42cfc19ca3841/jetified-providers-core-1.0.0/AndroidManifest.xml:11:5-14:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.3.1] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/04a64718dc4d10491216aa5355350294/core-1.3.1/AndroidManifest.xml:24:18-86
+	android:supportsRtl
+		ADDED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml:17:9-35
+	android:label
+		ADDED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml:15:9-41
+	android:roundIcon
+		ADDED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml:16:9-54
+	android:icon
+		ADDED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml:14:9-43
+	android:allowBackup
+		ADDED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml:13:9-35
+	android:theme
+		ADDED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml:18:9-40
+	android:name
+		ADDED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml:12:9-32
+activity#com.technopark.callerid.view.MainActivity
+ADDED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml:19:9-25:20
+	android:name
+		ADDED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml:19:19-52
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml:20:13-24:29
+action#android.intent.action.MAIN
+ADDED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml:21:17-69
+	android:name
+		ADDED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml:21:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml:23:17-77
+	android:name
+		ADDED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml:23:27-74
+activity#com.technopark.callerid.view.ui.callLog.DetailActivity
+ADDED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml:26:9-28:20
+	android:name
+		ADDED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml:26:19-65
+uses-sdk
+INJECTED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml
+INJECTED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml
+MERGED from [androidx.preference:preference:1.1.1] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/6924406c193bf778edd3cffed1dbfa5e/preference-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.preference:preference:1.1.1] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/6924406c193bf778edd3cffed1dbfa5e/preference-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui:2.3.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/8217468cfa443e9e899478ef29043bba/navigation-ui-2.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui:2.3.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/8217468cfa443e9e899478ef29043bba/navigation-ui-2.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.miguelcatalan:materialsearchview:1.4.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/eb812b4ba72c12347199dbf9d1e7f7d5/jetified-materialsearchview-1.4.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.miguelcatalan:materialsearchview:1.4.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/eb812b4ba72c12347199dbf9d1e7f7d5/jetified-materialsearchview-1.4.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.android.material:material:1.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/69e062cc2d18ccdf3b883aab52867547/material-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/69e062cc2d18ccdf3b883aab52867547/material-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.dagger:dagger-android-support:2.20] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/395ed47620ab728cd048ba212246fe7e/jetified-dagger-android-support-2.20/AndroidManifest.xml:20:5-44
+MERGED from [com.google.dagger:dagger-android-support:2.20] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/395ed47620ab728cd048ba212246fe7e/jetified-dagger-android-support-2.20/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/5c5382387b4ca5b17056aaa9536ca554/appcompat-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/5c5382387b4ca5b17056aaa9536ca554/appcompat-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core-ktx:1.3.1] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/aee671a49546a0f9b4fbae1c3cf3351e/jetified-core-ktx-1.3.1/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.core:core-ktx:1.3.1] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/aee671a49546a0f9b4fbae1c3cf3351e/jetified-core-ktx-1.3.1/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/05e5eb98b0164be621b4d5d2bb972ee4/constraintlayout-1.1.3/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/05e5eb98b0164be621b4d5d2bb972ee4/constraintlayout-1.1.3/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/df61f9801d0761a656fa557c0ccc631a/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/df61f9801d0761a656fa557c0ccc631a/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/639779ce74a9fb42a16dd59470336c4e/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/639779ce74a9fb42a16dd59470336c4e/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/340de25898f69b8e495514dde1d9620a/jetified-appcompat-resources-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/340de25898f69b8e495514dde1d9620a/jetified-appcompat-resources-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/386fb8c07b5e8af23e949ce74671f6d8/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/386fb8c07b5e8af23e949ce74671f6d8/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/67c54faf15db5e1122504319814000cc/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/67c54faf15db5e1122504319814000cc/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-fragment:2.3.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/a1f863e78ff9b9a021df15aefd056a73/navigation-fragment-2.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-fragment:2.3.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/a1f863e78ff9b9a021df15aefd056a73/navigation-fragment-2.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [me.everything:providers-android:1.0.1] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/4fde28b02722ed3e37bcacf9669dc4b1/jetified-providers-android-1.0.1/AndroidManifest.xml:7:5-9:41
+MERGED from [me.everything:providers-android:1.0.1] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/4fde28b02722ed3e37bcacf9669dc4b1/jetified-providers-android-1.0.1/AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/c9a0f8f4b67d0389b20ab6bcdbe77f5e/lifecycle-extensions-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/c9a0f8f4b67d0389b20ab6bcdbe77f5e/lifecycle-extensions-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-storage:19.1.1] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/e5c8a01228cb2bb88aa8e23f108b5aea/jetified-firebase-storage-19.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-storage:19.1.1] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/e5c8a01228cb2bb88aa8e23f108b5aea/jetified-firebase-storage-19.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [io.michaelrocks:libphonenumber-android:8.12.3] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/046d07a889783567470d3194ff2a2f17/jetified-libphonenumber-android-8.12.3/AndroidManifest.xml:7:5-9:41
+MERGED from [io.michaelrocks:libphonenumber-android:8.12.3] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/046d07a889783567470d3194ff2a2f17/jetified-libphonenumber-android-8.12.3/AndroidManifest.xml:7:5-9:41
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.1] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/a4956249bae80d1a82d7da9945723d4f/jetified-rxandroid-2.1.1/AndroidManifest.xml:18:5-43
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.1] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/a4956249bae80d1a82d7da9945723d4f/jetified-rxandroid-2.1.1/AndroidManifest.xml:18:5-43
+MERGED from [androidx.room:room-rxjava2:2.2.5] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/1a69e79e0ba947bc28941cfbc232e164/room-rxjava2-2.2.5/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-rxjava2:2.2.5] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/1a69e79e0ba947bc28941cfbc232e164/room-rxjava2-2.2.5/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-runtime:2.2.5] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/d37875e420f7353468f42b358a91460e/room-runtime-2.2.5/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-runtime:2.2.5] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/d37875e420f7353468f42b358a91460e/room-runtime-2.2.5/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.dagger:dagger-android:2.20] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/88bcf70f749dbc06495db1e791af8178/jetified-dagger-android-2.20/AndroidManifest.xml:20:5-44
+MERGED from [com.google.dagger:dagger-android:2.20] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/88bcf70f749dbc06495db1e791af8178/jetified-dagger-android-2.20/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/3b8b2233a490d9c4a8554091327cc066/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/3b8b2233a490d9c4a8554091327cc066/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/235c404d6975e54514ae0b9c93e20156/jetified-firebase-auth-interop-18.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/235c404d6975e54514ae0b9c93e20156/jetified-firebase-auth-interop-18.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/99a7710b87c83cb20253e0c12ec29791/jetified-play-services-base-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/99a7710b87c83cb20253e0c12ec29791/jetified-play-services-base-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-common:19.3.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/d859b53ef7d7990d5303e05462266f00/jetified-firebase-common-19.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-common:19.3.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/d859b53ef7d7990d5303e05462266f00/jetified-firebase-common-19.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/dd0870aad9c2c982c42f514e90ab3587/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/dd0870aad9c2c982c42f514e90ab3587/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/06e317675190b2cc5c2e2493353a0fe6/jetified-play-services-basement-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/06e317675190b2cc5c2e2493353a0fe6/jetified-play-services-basement-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.2.4] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/c7255c9022aec0d5cd48b81aad261f07/fragment-1.2.4/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.2.4] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/c7255c9022aec0d5cd48b81aad261f07/fragment-1.2.4/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/df29108619fbb74a4dc5a038b7d648a8/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/df29108619fbb74a4dc5a038b7d648a8/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/cbf2d527edf9332035c7795ad82d80b6/drawerlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/cbf2d527edf9332035c7795ad82d80b6/drawerlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/4da429ca8f9bd5d7416837c2c3c0ac70/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/4da429ca8f9bd5d7416837c2c3c0ac70/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.1.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/571bc5ac9756293c1ac8e598765d5b3d/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/571bc5ac9756293c1ac8e598765d5b3d/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.3.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/fdeb654980ae546831dc6677f56fa34c/transition-1.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.3.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/fdeb654980ae546831dc6677f56fa34c/transition-1.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/c44f228f14f25c97e3c17fbc28c0f76a/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/c44f228f14f25c97e3c17fbc28c0f76a/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/8efdafc7c8ad0c90b578df4c52fb0b52/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/8efdafc7c8ad0c90b578df4c52fb0b52/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime:2.3.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/58a0b776cb8669fe179f1cc6259093e5/navigation-runtime-2.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime:2.3.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/58a0b776cb8669fe179f1cc6259093e5/navigation-runtime-2.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.1.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/0365d4026b4bb76e7a4a408d12de77a7/jetified-activity-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.1.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/0365d4026b4bb76e7a4a408d12de77a7/jetified-activity-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common:2.3.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/47a00faa063f50431cc07b3d76d868e2/navigation-common-2.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common:2.3.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/47a00faa063f50431cc07b3d76d868e2/navigation-common-2.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.3.1] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/04a64718dc4d10491216aa5355350294/core-1.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.3.1] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/04a64718dc4d10491216aa5355350294/core-1.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/597ed01477a97cd720c94ba162f3a183/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/597ed01477a97cd720c94ba162f3a183/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/b57739a66096b9ac59e8faffadd60213/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/b57739a66096b9ac59e8faffadd60213/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/672035ea12805afcb547b209cd29b4fb/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/672035ea12805afcb547b209cd29b4fb/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-service:2.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/885a8e4ff32649b983acfe99d7ae7c49/jetified-lifecycle-service-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-service:2.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/885a8e4ff32649b983acfe99d7ae7c49/jetified-lifecycle-service-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/87f2b873e069f07987792aa58a1bb146/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/87f2b873e069f07987792aa58a1bb146/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/2f5c8a828562716537780a828f26d9e6/lifecycle-livedata-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/2f5c8a828562716537780a828f26d9e6/lifecycle-livedata-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/15e0df2309dbc252d2448731986b7e4b/jetified-lifecycle-viewmodel-savedstate-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/15e0df2309dbc252d2448731986b7e4b/jetified-lifecycle-viewmodel-savedstate-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/a84f90e85b1273f5d25b3896feedc9cc/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/a84f90e85b1273f5d25b3896feedc9cc/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/eb858db69b47c3f8081faa25b1a34341/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/eb858db69b47c3f8081faa25b1a34341/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/1ad6ab76e2b3e29971179240d4daca94/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/1ad6ab76e2b3e29971179240d4daca94/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/be9cd1f8f5221857266f216ee92258a2/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/be9cd1f8f5221857266f216ee92258a2/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-components:16.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/c75e4b6ff89e52124d0119de2b14272d/jetified-firebase-components-16.0.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-components:16.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/c75e4b6ff89e52124d0119de2b14272d/jetified-firebase-components-16.0.0/AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.sqlite:sqlite-framework:2.0.1] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/efaf21a38254058d46a1e013db06af43/sqlite-framework-2.0.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.0.1] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/efaf21a38254058d46a1e013db06af43/sqlite-framework-2.0.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.0.1] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/706108e2858782fedd4be6bf5844aa78/sqlite-2.0.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.0.1] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/706108e2858782fedd4be6bf5844aa78/sqlite-2.0.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/88df709b0c9d71fe03f32fde55e747a5/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/88df709b0c9d71fe03f32fde55e747a5/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/f18a2669cb032d6b5f7752d7aea9057f/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/f18a2669cb032d6b5f7752d7aea9057f/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/7230dd8aa6aefa932cbd4694349c72ef/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/7230dd8aa6aefa932cbd4694349c72ef/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/4c73a97f5f28932604ddbb05f82e4243/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/4c73a97f5f28932604ddbb05f82e4243/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/30ebb5f8928bbfb85d2c5e35aec3f011/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/30ebb5f8928bbfb85d2c5e35aec3f011/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [me.everything:providers-core:1.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/cf1803e7156f98a916d42cfc19ca3841/jetified-providers-core-1.0.0/AndroidManifest.xml:7:5-9:41
+MERGED from [me.everything:providers-core:1.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/cf1803e7156f98a916d42cfc19ca3841/jetified-providers-core-1.0.0/AndroidManifest.xml:7:5-9:41
+INJECTED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml
+INJECTED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml
+		ADDED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml
+		ADDED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/olegmaksimenko/Documents/projects/CallerID/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.firebase:firebase-storage:19.1.1] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/e5c8a01228cb2bb88aa8e23f108b5aea/jetified-firebase-storage-19.1.1/AndroidManifest.xml:26:5-79
+	android:name
+		ADDED from [com.google.firebase:firebase-storage:19.1.1] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/e5c8a01228cb2bb88aa8e23f108b5aea/jetified-firebase-storage-19.1.1/AndroidManifest.xml:26:22-76
+uses-permission#android.permission.INTERNET
+ADDED from [com.google.firebase:firebase-storage:19.1.1] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/e5c8a01228cb2bb88aa8e23f108b5aea/jetified-firebase-storage-19.1.1/AndroidManifest.xml:27:5-67
+	android:name
+		ADDED from [com.google.firebase:firebase-storage:19.1.1] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/e5c8a01228cb2bb88aa8e23f108b5aea/jetified-firebase-storage-19.1.1/AndroidManifest.xml:27:22-64
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [com.google.firebase:firebase-storage:19.1.1] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/e5c8a01228cb2bb88aa8e23f108b5aea/jetified-firebase-storage-19.1.1/AndroidManifest.xml:30:9-36:19
+MERGED from [com.google.firebase:firebase-common:19.3.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/d859b53ef7d7990d5303e05462266f00/jetified-firebase-common-19.3.0/AndroidManifest.xml:32:9-36:35
+MERGED from [com.google.firebase:firebase-common:19.3.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/d859b53ef7d7990d5303e05462266f00/jetified-firebase-common-19.3.0/AndroidManifest.xml:32:9-36:35
+	android:exported
+		ADDED from [com.google.firebase:firebase-storage:19.1.1] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/e5c8a01228cb2bb88aa8e23f108b5aea/jetified-firebase-storage-19.1.1/AndroidManifest.xml:32:13-37
+	tools:targetApi
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/d859b53ef7d7990d5303e05462266f00/jetified-firebase-common-19.3.0/AndroidManifest.xml:36:13-32
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/d859b53ef7d7990d5303e05462266f00/jetified-firebase-common-19.3.0/AndroidManifest.xml:34:13-43
+	android:name
+		ADDED from [com.google.firebase:firebase-storage:19.1.1] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/e5c8a01228cb2bb88aa8e23f108b5aea/jetified-firebase-storage-19.1.1/AndroidManifest.xml:31:13-84
+meta-data#com.google.firebase.components:com.google.firebase.storage.StorageRegistrar
+ADDED from [com.google.firebase:firebase-storage:19.1.1] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/e5c8a01228cb2bb88aa8e23f108b5aea/jetified-firebase-storage-19.1.1/AndroidManifest.xml:33:13-35:85
+	android:value
+		ADDED from [com.google.firebase:firebase-storage:19.1.1] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/e5c8a01228cb2bb88aa8e23f108b5aea/jetified-firebase-storage-19.1.1/AndroidManifest.xml:35:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-storage:19.1.1] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/e5c8a01228cb2bb88aa8e23f108b5aea/jetified-firebase-storage-19.1.1/AndroidManifest.xml:34:17-107
+service#androidx.room.MultiInstanceInvalidationService
+ADDED from [androidx.room:room-runtime:2.2.5] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/d37875e420f7353468f42b358a91460e/room-runtime-2.2.5/AndroidManifest.xml:25:9-28:40
+	android:exported
+		ADDED from [androidx.room:room-runtime:2.2.5] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/d37875e420f7353468f42b358a91460e/room-runtime-2.2.5/AndroidManifest.xml:28:13-37
+	android:directBootAware
+		ADDED from [androidx.room:room-runtime:2.2.5] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/d37875e420f7353468f42b358a91460e/room-runtime-2.2.5/AndroidManifest.xml:27:13-43
+	android:name
+		ADDED from [androidx.room:room-runtime:2.2.5] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/d37875e420f7353468f42b358a91460e/room-runtime-2.2.5/AndroidManifest.xml:26:13-74
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:17.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/99a7710b87c83cb20253e0c12ec29791/jetified-play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/99a7710b87c83cb20253e0c12ec29791/jetified-play-services-base-17.0.0/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/99a7710b87c83cb20253e0c12ec29791/jetified-play-services-base-17.0.0/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/99a7710b87c83cb20253e0c12ec29791/jetified-play-services-base-17.0.0/AndroidManifest.xml:24:13-79
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:19.3.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/d859b53ef7d7990d5303e05462266f00/jetified-firebase-common-19.3.0/AndroidManifest.xml:26:9-30:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/d859b53ef7d7990d5303e05462266f00/jetified-firebase-common-19.3.0/AndroidManifest.xml:28:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/d859b53ef7d7990d5303e05462266f00/jetified-firebase-common-19.3.0/AndroidManifest.xml:29:13-37
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/d859b53ef7d7990d5303e05462266f00/jetified-firebase-common-19.3.0/AndroidManifest.xml:30:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/d859b53ef7d7990d5303e05462266f00/jetified-firebase-common-19.3.0/AndroidManifest.xml:27:13-77
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:17.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/06e317675190b2cc5c2e2493353a0fe6/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/06e317675190b2cc5c2e2493353a0fe6/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/06e317675190b2cc5c2e2493353a0fe6/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+provider#androidx.lifecycle.ProcessLifecycleOwnerInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/672035ea12805afcb547b209cd29b4fb/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:25:9-29:43
+	android:authorities
+		ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/672035ea12805afcb547b209cd29b4fb/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:27:13-69
+	android:multiprocess
+		ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/672035ea12805afcb547b209cd29b4fb/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:29:13-40
+	android:exported
+		ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/672035ea12805afcb547b209cd29b4fb/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:28:13-37
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] /Users/olegmaksimenko/.gradle/caches/transforms-2/files-2.1/672035ea12805afcb547b209cd29b4fb/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:26:13-79
