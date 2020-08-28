@@ -59,7 +59,7 @@ class CallLogFragment : Fragment(), CallLogView {
                 startActivity(intent)
             }
         }
-        showContacts()
+       // showContacts()
     }
 
     private fun initViews(view: View) {
@@ -142,7 +142,7 @@ class CallLogFragment : Fragment(), CallLogView {
             ) != PackageManager.PERMISSION_GRANTED)
         ) {
             Log.d(Thread.currentThread().name, "onResume")
-            // showContacts()
+             showContacts()
         }
     }
 }

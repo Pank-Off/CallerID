@@ -54,17 +54,24 @@ class DatabaseHelper() {
                     })
     }
 
-    fun getData() {
-        val disposable: Disposable =
-            spamerDao.getAll().subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(
-                    { users ->
-                        Log.d(Thread.currentThread().name, "getData: $users")
-                    },
-                    { throwable ->
-                        Log.d(Thread.currentThread().name, "getData: $throwable")
-                    })
+    fun getData(): List<Spamer> {
+//        var spamers : List<Spamer>? = null
+//        val disposable: Disposable =
+//            spamerDao.getAll().subscribeOn(Schedulers.io())
+//                .observeOn(AndroidSchedulers.mainThread())
+//                .subscribe(
+//                    { users ->
+//                        Log.d(Thread.currentThread().name, "getData: $users")
+//                        spamers = users
+//
+//                    },
+//                    { throwable ->
+//                        Log.d(Thread.currentThread().name, "getData: $throwable")
+//                    })
+//return spamers
+
+        return spamerDao.getAll()
+
     }
 
     fun removeRecord(number: String) {

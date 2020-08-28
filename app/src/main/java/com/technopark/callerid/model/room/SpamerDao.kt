@@ -14,7 +14,7 @@ interface SpamerDao {
     fun delete(phoneNumber: String): Single<Int>
 
     @Query("SELECT * FROM table_spamers")
-    fun getAll(): Single<List<Spamer>>
+    fun getAll(): List<Spamer>
 
     @Query("SELECT * FROM table_spamers WHERE phoneNumber = :phoneNumber")
     fun getSingleUserInfo(phoneNumber: String): Cursor

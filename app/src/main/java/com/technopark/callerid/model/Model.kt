@@ -2,6 +2,7 @@ package com.technopark.callerid.model
 
 import android.content.Context
 import com.technopark.callerid.R
+import com.technopark.callerid.model.room.Spamer
 import com.technopark.callerid.view.ui.callLog.PhoneBook
 import me.everything.providers.android.calllog.Call
 import me.everything.providers.android.calllog.CallsProvider
@@ -21,7 +22,7 @@ class Model {
 
         val callsProvider = CallsProvider(context)
         val number: List<Call> = callsProvider.calls.list
-        val numberSize: Int = number.size.coerceAtMost(10)
+        val numberSize: Int = number.size.coerceAtMost(1)
         for (i in 0 until numberSize) {
             contacts.add(number[i].number)
             names.add(number[i].name)
@@ -60,8 +61,8 @@ class Model {
         mDatabaseHelper.removeRecord(number)
     }
 
-    fun getAllData() {
-        mDatabaseHelper.getData()
+    fun getAllData(): List<Spamer> {
+        return mDatabaseHelper.getData()
     }
 
     fun getSingleUserInfo(number: String): String {
