@@ -14,12 +14,12 @@ class PhoneBook(
         this.icon = icon
     }
 
-    fun setName(name: String?) {
-        this.name = name!!
+    fun setName(name: String) {
+        this.name = name
     }
 
-    fun setNumber(number: String?) {
-        this.number = number!!
+    fun setNumber(number: String) {
+        this.number = number
     }
 
 }
