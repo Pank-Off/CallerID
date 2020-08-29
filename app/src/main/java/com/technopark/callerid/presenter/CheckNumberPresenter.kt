@@ -1,15 +1,12 @@
 package com.technopark.callerid.presenter
 
-import android.content.Context
 import android.util.Log
-import android.widget.Toast
+import com.google.i18n.phonenumbers.NumberParseException
+import com.google.i18n.phonenumbers.PhoneNumberUtil
+import com.google.i18n.phonenumbers.Phonenumber
 import com.technopark.callerid.app.App
 import com.technopark.callerid.model.Model
 import com.technopark.callerid.view.ui.checkNumber.CheckNumberView
-import io.michaelrocks.libphonenumber.android.NumberParseException
-import io.michaelrocks.libphonenumber.android.PhoneNumberUtil
-import io.michaelrocks.libphonenumber.android.Phonenumber
-import java.lang.reflect.InvocationTargetException
 import javax.inject.Inject
 
 class CheckNumberPresenter(private var checkNumberView: CheckNumberView) {
@@ -23,9 +20,9 @@ class CheckNumberPresenter(private var checkNumberView: CheckNumberView) {
     @Inject
     lateinit var model: Model
 
-    fun checkValidNumber(context: Context?, number: String) {
+    fun checkValidNumber(number: String) {
 
-        util = PhoneNumberUtil.createInstance(context)
+        util = PhoneNumberUtil.getInstance()
         try {
             val phoneNumber: Phonenumber.PhoneNumber = util.parse(number, "RU")
             correctPhone = util.format(phoneNumber, PhoneNumberUtil.PhoneNumberFormat.E164)

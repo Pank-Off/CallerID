@@ -2,6 +2,7 @@ package com.technopark.callerid.model
 
 import android.content.Context
 import com.technopark.callerid.R
+import com.technopark.callerid.model.room.Spamer
 import com.technopark.callerid.view.ui.callLog.PhoneBook
 import me.everything.providers.android.calllog.Call
 import me.everything.providers.android.calllog.CallsProvider
@@ -63,8 +64,8 @@ class Model {
         mDatabaseHelper.removeRecord(number)
     }
 
-    fun getAllData() {
-        mDatabaseHelper.getData()
+    fun getAllData(): List<Spamer> {
+        return mDatabaseHelper.getData()
     }
 
     fun getSingleUserInfo(number: String): String {

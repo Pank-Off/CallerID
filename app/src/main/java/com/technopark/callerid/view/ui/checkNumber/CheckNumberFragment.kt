@@ -14,7 +14,9 @@ import com.google.android.material.textfield.TextInputEditText
 import com.technopark.callerid.R
 import com.technopark.callerid.model.FirebaseWorker
 import com.technopark.callerid.presenter.CheckNumberPresenter
-import kotlinx.coroutines.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class CheckNumberFragment : Fragment(), CheckNumberView {
     private lateinit var appContext: Context
@@ -55,7 +57,7 @@ class CheckNumberFragment : Fragment(), CheckNumberView {
     private fun setOnCheckBtnClickListener() {
         checkBtn.setOnClickListener {
             val number: String = numberOfPhoneEditText.text.toString()
-            checkNumberPresenter.checkValidNumber(context, number)
+            checkNumberPresenter.checkValidNumber(number)
             if (validNumber) {
                 Toast.makeText(context, "Good", Toast.LENGTH_LONG).show()
                 GlobalScope.launch(Dispatchers.IO) {
@@ -97,6 +99,8 @@ class CheckNumberFragment : Fragment(), CheckNumberView {
     }
 
     override fun isSpam(isSpam: String) {
-        isSpamTextfield.text = isSpam
+        GlobalScope.launch(Dispatchers.Main) {
+            isSpamTextfield.text = isSpam
+        }
     }
 }
