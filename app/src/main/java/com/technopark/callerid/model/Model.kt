@@ -25,14 +25,16 @@ class Model {
         for (i in 0 until numberSize) {
             contacts.add(number[i].number)
             names.add(number[i].name)
-            types.add(number[i].type) //краш если звонок был принят/сделан с другой симки(types = null) // а еще сброшенный звонок тоже это null тип((
-            temp.add(
-                PhoneBook(
-                    determineType(types[i], contacts[i]),
-                    if (names[i] == null) "Unknown Number" else names[i],
-                    contacts[i]
+            if (number[i].type != null) {
+                types.add(number[i].type) //краш если звонок был принят/сделан с другой симки(types = null) // а еще сброшенный звонок тоже это null тип((
+                temp.add(
+                    PhoneBook(
+                        determineType(types[i], contacts[i]),
+                        if (names[i] == null) "Unknown Number" else names[i],
+                        contacts[i]
+                    )
                 )
-            )
+            }
         }
         phoneBooks.addAll(temp)
     }
