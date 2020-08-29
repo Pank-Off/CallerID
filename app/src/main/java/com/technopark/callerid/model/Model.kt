@@ -5,6 +5,7 @@ import com.technopark.callerid.R
 import com.technopark.callerid.view.ui.callLog.PhoneBook
 import me.everything.providers.android.calllog.Call
 import me.everything.providers.android.calllog.CallsProvider
+import java.lang.Exception
 
 class Model {
 
@@ -25,16 +26,21 @@ class Model {
         for (i in 0 until numberSize) {
             contacts.add(number[i].number)
             names.add(number[i].name)
-            if (number[i].type != null) {
-                types.add(number[i].type) //краш если звонок был принят/сделан с другой симки(types = null) // а еще сброшенный звонок тоже это null тип((
-                temp.add(
-                    PhoneBook(
-                        determineType(types[i], contacts[i]),
-                        if (names[i] == null) "Unknown Number" else names[i],
-                        contacts[i]
-                    )
-                )
+            types.add(number[i].type) //краш если звонок был принят/сделан с другой симки(types = null) // а еще сброшенный звонок тоже это null тип((
+            var callTypeImage: Int?
+            try {
+                callTypeImage = determineType(types[i], contacts[i])
             }
+            catch(e: Exception) {
+                callTypeImage = 0
+            }
+            temp.add(
+                PhoneBook(
+                    if (callTypeImage != null) callTypeImage else 0,
+                    if (names[i] == null) "Unknown Number" else names[i],
+                    contacts[i]
+                )
+            )
         }
         phoneBooks.addAll(temp)
     }
