@@ -7,7 +7,7 @@ import io.reactivex.Single
 @Dao
 interface SpamerDao {
 
-    @Insert //(onConflict = OnConflictStrategy.REPLACE)
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insert(spamer: Spamer): Single<Long>
 
     @Query("DELETE FROM table_spamers WHERE phoneNumber = :phoneNumber")
