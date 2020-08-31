@@ -10,13 +10,18 @@ import androidx.recyclerview.widget.RecyclerView
 import com.technopark.callerid.R
 import com.technopark.callerid.model.room.Spamer
 import com.technopark.callerid.view.ui.callLog.OnItemClickListener
+import java.io.UncheckedIOException
+import java.util.*
+import kotlin.collections.ArrayList
 
 class SpamAdapter(
     private var spamerList: List<Spamer>,
+
     private var onItemClickListener: OnItemClickListener
 ) : RecyclerView.Adapter<SpamAdapter.ViewHolder>(), Filterable {
 
     private lateinit var context: Context
+    private var spamerListFiltered: List<Spamer> = spamerList
 
     class ViewHolder(itemView: View, val listener: OnItemClickListener) :
         RecyclerView.ViewHolder(itemView) {
@@ -39,18 +44,50 @@ class SpamAdapter(
     }
 
     override fun getItemCount(): Int {
-        return spamerList.size
+        return spamerListFiltered.size
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.flagView.setImageResource(R.drawable.bancircle)
         Log.d("Position", position.toString() + "")
-        holder.nameView.text = spamerList[position].comment
-        holder.numberView.text = spamerList[position].phoneNumber
+        holder.nameView.text = spamerListFiltered[position].comment
+        holder.numberView.text = spamerListFiltered[position].phoneNumber
         holder.oneItemView.setOnClickListener { holder.listener.onClick(position) }
     }
 
     override fun getFilter(): Filter {
-        TODO("Not yet implemented")
+        Log.d(javaClass.simpleName, "getFilter")
+        return object : Filter() {
+            override fun performFiltering(constraint: CharSequence): FilterResults {
+                val charString: String = constraint.toString()
+                Log.d(javaClass.simpleName + " charString", charString)
+
+                if (charString.isEmpty()) {
+                    spamerListFiltered = spamerList
+                } else {
+                    val filteredList: ArrayList<Spamer> = ArrayList()
+                    for (number in spamerList) {
+                        if (number.phoneNumber.contains(constraint) ||
+                            number.comment.toLowerCase(Locale.ROOT).contains(
+                                charString.toLowerCase(
+                                    Locale.ROOT
+                                )
+                            )
+                        ) {
+                            filteredList.add(number)
+                        }
+                    }
+                    spamerListFiltered = filteredList
+                }
+                val filterResults = FilterResults()
+                filterResults.values = spamerListFiltered
+                return filterResults
+            }
+
+            override fun publishResults(constraint: CharSequence?, results: FilterResults) {
+                spamerListFiltered = results.values as List<Spamer>
+                notifyDataSetChanged()
+            }
+        }
     }
 }
