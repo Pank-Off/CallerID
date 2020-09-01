@@ -6,4 +6,7 @@
 Написанный на Java
 Используемые технологии: 
 Архитектура MVP
-Room, rxjava, coroutine
+Room, rxjava, coroutine, dagger, android navigation 
+Скачивание базы данных спамеров с firebase storage
+Корректность ввода номера в текстовое поле достигается с использованием библиотеки libphonenumber
+Поиск на экране спамеров с использованием метода filter в SpamAdapter
