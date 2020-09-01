@@ -14,6 +14,11 @@ import androidx.navigation.ui.NavigationUI
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.technopark.callerid.R
 import com.technopark.callerid.view.ui.settings.SettingsFragment
+import androidx.core.content.ContextCompat.getSystemService
+import android.provider.BlockedNumberContract.BlockedNumbers
+import android.telecom.TelecomManager
+import android.net.Uri
+import android.content.ContentValues
 
 
 class MainActivity : AppCompatActivity() {
@@ -25,6 +30,9 @@ class MainActivity : AppCompatActivity() {
 
         initNavBar()
         setThemeMode()
+        if (Build.VERSION.SDK_INT >= 24) {
+            //blockNumber()
+        }
     }
 
     private fun setThemeMode() {
@@ -53,5 +61,14 @@ class MainActivity : AppCompatActivity() {
             Navigation.findNavController(this, R.id.nav_host_fragment)
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration)
         NavigationUI.setupWithNavController(navView, navController)
+    }
+
+    private fun blockNumber() {
+        //val c: Context = this
+        val t:TelecomManager? = getSystemService(Context.TELECOM_SERVICE) as TelecomManager?
+        //c.startActivity(t.createManageBlockedNumbersIntent(), null);
+        val values = ContentValues()
+        values.put(BlockedNumbers.COLUMN_ORIGINAL_NUMBER, "+79152274034")
+        val uri = getContentResolver().insert(BlockedNumbers.CONTENT_URI, values)
     }
 }
