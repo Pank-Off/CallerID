@@ -18,7 +18,8 @@ class SettingsFragment : Fragment(), SettingsView {
 
     private lateinit var settingsPresenter: SettingsPresenter
     private lateinit var shareButton: Button
-    private lateinit var darkMode: SwitchMaterial
+    private lateinit var darkModeSwitcher: SwitchMaterial
+    private lateinit var blockingModeSwitcher: SwitchMaterial
     private lateinit var text: TextView
 
     companion object {
@@ -45,11 +46,11 @@ class SettingsFragment : Fragment(), SettingsView {
             requireActivity().packageName,
             Context.MODE_PRIVATE
         )
-        darkMode.isChecked = sharedPreferences.getBoolean(KEY, false)
+        darkModeSwitcher.isChecked = sharedPreferences.getBoolean(KEY, false)
     }
 
     private fun setOnSwitchCheckedChangeListener() {
-        darkMode.setOnCheckedChangeListener { _, isChecked ->
+        darkModeSwitcher.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
                 text.setText(R.string.dark_mode_is_enabled)
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
@@ -81,7 +82,8 @@ class SettingsFragment : Fragment(), SettingsView {
 
     private fun initViews(view: View) {
         shareButton = view.findViewById(R.id.shareButton)
-        darkMode = view.findViewById(R.id.dark_mode)
+        darkModeSwitcher = view.findViewById(R.id.dark_mode)
+        blockingModeSwitcher = view.findViewById(R.id.blocking_mode)
         text = view.findViewById(R.id.settingsText)
     }
 }
