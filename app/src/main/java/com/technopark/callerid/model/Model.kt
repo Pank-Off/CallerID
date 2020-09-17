@@ -28,10 +28,10 @@ class Model {
             types.add(number[i].type)
             val callTypeImage: Int = try {
                 determineType(types[i], contacts[i])
-            } catch(e: Exception) {
+            } catch (e: Exception) {
                 0
             }
-           phoneBooks.add(
+            phoneBooks.add(
                 PhoneBook(
                     callTypeImage,
                     if (names[i] == null) "Unknown Number" else names[i],
@@ -56,16 +56,16 @@ class Model {
         return R.drawable.missing
     }
 
-    fun addRecord(number: String, isSpam: Boolean, comment: String) {
-        mDatabaseHelper.addRecord(number, isSpam, comment)
+    fun addRecord(number: String, isSpam: Boolean, comment: String): Boolean {
+        return mDatabaseHelper.addRecord(number, isSpam, comment)
     }
 
     fun removeRecord(number: String) {
         mDatabaseHelper.removeRecord(number)
     }
 
-    fun replaceRecord(oldNumber:String,correctPhone:String, newComment:String){
-        mDatabaseHelper.replaceRecord(oldNumber,correctPhone,newComment)
+    fun replaceRecord(oldNumber: String, correctPhone: String, newComment: String) {
+        mDatabaseHelper.replaceRecord(oldNumber, correctPhone, newComment)
     }
 
     fun getAllData(): List<Spamer> {

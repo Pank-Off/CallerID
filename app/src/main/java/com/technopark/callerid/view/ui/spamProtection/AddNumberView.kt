@@ -4,5 +4,6 @@ interface AddNumberView {
     fun validNumber()
     fun invalidNumber()
     fun addSuccessful()
+    fun addFailed()
     fun replaceSuccessful()
 }

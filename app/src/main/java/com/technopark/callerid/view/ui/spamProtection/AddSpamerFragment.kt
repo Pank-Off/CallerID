@@ -1,18 +1,17 @@
 package com.technopark.callerid.view.ui.spamProtection
 
 import android.os.Bundle
-import android.os.Handler
 import android.view.*
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import com.google.android.material.textfield.TextInputEditText
-import com.google.i18n.phonenumbers.PhoneNumberUtil
-import com.technopark.callerid.BuildConfig
 import com.technopark.callerid.R
 import com.technopark.callerid.presenter.AddNumberPresenter
 import com.technopark.callerid.view.ui.callLog.DetailActivity.Companion.EXTRA
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import java.util.*
 
 class AddSpamerFragment : Fragment(), AddNumberView {
@@ -33,7 +32,7 @@ class AddSpamerFragment : Fragment(), AddNumberView {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_add_number, container, false);
+        return inflater.inflate(R.layout.fragment_add_number, container, false)
 
     }
 
@@ -71,8 +70,9 @@ class AddSpamerFragment : Fragment(), AddNumberView {
                 val number = numberOfPhoneEditText.text.toString()
                 addNumberPresenter.checkValidNumber(number)
                 if (validNumber) {
-                    addNumberPresenter.addRecord(number, true, getComment())
-                    /**Проверки на дубликаты сделать*/
+                    GlobalScope.launch(Dispatchers.IO) {
+                        addNumberPresenter.addRecord(number, true, getComment())
+                    }
                     requireActivity().finish()
                 }
             } else {
@@ -136,8 +136,15 @@ class AddSpamerFragment : Fragment(), AddNumberView {
     }
 
     override fun addSuccessful() {
-        Toast.makeText(context, "Spamer is added", Toast.LENGTH_LONG).show()
+        GlobalScope.launch(Dispatchers.Main) {
+            Toast.makeText(context, "Spamer is added", Toast.LENGTH_LONG).show()
+        }
+    }
 
+    override fun addFailed() {
+        GlobalScope.launch(Dispatchers.Main) {
+            Toast.makeText(context, "Sorry, duplicate", Toast.LENGTH_LONG).show()
+        }
     }
 
     override fun replaceSuccessful() {

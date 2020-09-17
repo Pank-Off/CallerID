@@ -41,7 +41,11 @@ class DatabaseHelper() {
 
     }
 
-    fun addRecord(number: String, isSpam: Boolean, comment: String) {
+    fun addRecord(number: String, isSpam: Boolean, comment: String): Boolean {
+        val duplicateIsFound: Boolean = checkDuplicate(number)
+        if (duplicateIsFound) {
+            return true
+        }
         val spamer = Spamer(number, isSpam, comment)
         val disposable: Disposable =
             spamerDao.insert(spamer).subscribeOn(Schedulers.io())
@@ -52,6 +56,16 @@ class DatabaseHelper() {
                     { throwable ->
                         Log.d(Thread.currentThread().name, throwable.toString())
                     })
+        return false
+    }
+
+    private fun checkDuplicate(phoneNumber: String): Boolean {
+        val cursor: Cursor = spamerDao.getSingleUserInfo(phoneNumber)
+        if (cursor.count > 0) {
+            cursor.close()
+            return true
+        }
+        return false
     }
 
     fun getData(): List<Spamer> {
@@ -87,8 +101,8 @@ class DatabaseHelper() {
                     })
     }
 
-    fun replaceRecord(oldNumber:String, correctPhone:String, newComment:String){
-        Log.d(javaClass.simpleName,"replaceRecord")
+    fun replaceRecord(oldNumber: String, correctPhone: String, newComment: String) {
+        Log.d(javaClass.simpleName, "replaceRecord")
     }
 }
 

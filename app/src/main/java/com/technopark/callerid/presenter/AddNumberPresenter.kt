@@ -32,7 +32,7 @@ class AddNumberPresenter(private var addNumberView: AddNumberView) {
             if (util.isPossibleNumber(phoneNumber)) {
                 addNumberView.validNumber()
             } else {
-               addNumberView.invalidNumber()
+                addNumberView.invalidNumber()
             }
         } catch (exc: NumberParseException) {
             Log.e("NumberParseException", exc.errorType.name)
@@ -41,12 +41,16 @@ class AddNumberPresenter(private var addNumberView: AddNumberView) {
     }
 
     fun addRecord(number: String, isSpam: Boolean, comment: String) {
-        model.addRecord(number, isSpam, comment)
-        addNumberView.addSuccessful()
+        val duplicateIsFound: Boolean = model.addRecord(number, isSpam, comment)
+        if (duplicateIsFound) {
+            addNumberView.addFailed()
+        } else {
+            addNumberView.addSuccessful()
+        }
     }
 
-    fun replaceRecord(oldNumber:String,correctPhone:String, newComment:String){
-        model.replaceRecord(oldNumber,correctPhone,newComment)
+    fun replaceRecord(oldNumber: String, correctPhone: String, newComment: String) {
+        model.replaceRecord(oldNumber, correctPhone, newComment)
         addNumberView.replaceSuccessful()
     }
 }
