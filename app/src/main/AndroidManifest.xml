@@ -37,6 +37,7 @@
         <activity android:name=".view.ui.callLog.DetailActivity">
 
         </activity>
+        <activity android:name=".view.ui.spamProtection.AddNumberActivity"/>
     </application>
 
 </manifest>

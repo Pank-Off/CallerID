@@ -2,6 +2,7 @@ package com.technopark.callerid.view.ui.spamProtection
 
 import android.app.SearchManager
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.*
@@ -15,6 +16,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.technopark.callerid.R
 import com.technopark.callerid.model.room.Spamer
 import com.technopark.callerid.presenter.SpamProtectionPresenter
+import com.technopark.callerid.view.ui.callLog.DetailActivity.Companion.EXTRA
 import com.technopark.callerid.view.ui.callLog.OnItemClickListener
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -45,8 +47,16 @@ class SpamProtectionFragment : Fragment(), SpamProtectionView {
         super.onViewCreated(view, savedInstanceState)
         spamProtectionPresenter = SpamProtectionPresenter(this)
         initViews(view)
-        //   setOnFloatingBtnClick()
+        setOnFloatingBtnClick()
         setHasOptionsMenu(true)
+    }
+
+    private fun setOnFloatingBtnClick() {
+        floatingButton.setOnClickListener {
+            val intent = Intent(activity, AddNumberActivity::class.java)
+            intent.putExtra(EXTRA, "")
+            startActivity(intent)
+        }
     }
 
     private fun initViews(view: View) {
@@ -108,6 +118,11 @@ class SpamProtectionFragment : Fragment(), SpamProtectionView {
                 override fun onClick(position: Int) {
                     Toast.makeText(context, spamers[position].phoneNumber, Toast.LENGTH_SHORT)
                         .show()
+                    // получаем выбранный пункт
+                    val selectedSpamer: String = spamers[position].phoneNumber
+                    val intent = Intent(activity, AddNumberActivity::class.java)
+                    intent.putExtra(EXTRA, selectedSpamer)
+                    startActivity(intent)
                 }
             })
             spamList.adapter = adapter
