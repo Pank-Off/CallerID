@@ -86,5 +86,9 @@ class DatabaseHelper() {
                         Log.d(Thread.currentThread().name, "deleteData: $throwable")
                     })
     }
+
+    fun replaceRecord(oldNumber:String, correctPhone:String, newComment:String){
+        Log.d(javaClass.simpleName,"replaceRecord")
+    }
 }
 
