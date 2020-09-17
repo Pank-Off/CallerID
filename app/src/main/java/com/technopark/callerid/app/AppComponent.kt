@@ -13,4 +13,5 @@ interface AppComponent {
     fun inject(checkNumberPresenter: CheckNumberPresenter)
     fun inject(spamProtectionPresenter: SpamProtectionPresenter)
     fun inject(detailPresenter: DetailPresenter)
+    fun inject(addNumberPresenter: AddNumberPresenter)
 }

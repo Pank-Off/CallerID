@@ -69,6 +69,6 @@ class MainActivity : AppCompatActivity() {
         //c.startActivity(t.createManageBlockedNumbersIntent(), null);
         val values = ContentValues()
         values.put(BlockedNumbers.COLUMN_ORIGINAL_NUMBER, "+79152274034")
-        val uri = getContentResolver().insert(BlockedNumbers.CONTENT_URI, values)
+        val uri = contentResolver.insert(BlockedNumbers.CONTENT_URI, values)
     }
 }

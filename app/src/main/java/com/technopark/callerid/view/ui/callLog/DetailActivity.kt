@@ -27,7 +27,7 @@ class DetailActivity : AppCompatActivity(), DetailView {
     val spamerDao: SpamerDao = App.getAppDatabase().spamerDao()
 
     companion object {
-        val EXTRA = "EXTRA"
+        const val EXTRA = "EXTRA"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
