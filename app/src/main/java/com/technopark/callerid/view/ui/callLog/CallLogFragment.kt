@@ -27,6 +27,7 @@ class CallLogFragment : Fragment(), CallLogView {
 
     private lateinit var callLogPresenter: CallLogPresenter
     private lateinit var contactsList: RecyclerView
+    private val adapter = PhoneAdapter()
     private lateinit var mDividerItemDecoration: DividerItemDecoration
     private lateinit var oops: TextView
     private lateinit var sad_emotion: ImageView
@@ -59,7 +60,7 @@ class CallLogFragment : Fragment(), CallLogView {
                 startActivity(intent)
             }
         }
-       // showContacts()
+        // showContacts()
     }
 
     private fun initViews(view: View) {
@@ -97,21 +98,23 @@ class CallLogFragment : Fragment(), CallLogView {
             )
             Log.d("Coroutine", Thread.currentThread().name)
             contactsList.addItemDecoration(mDividerItemDecoration)
-            val adapter = PhoneAdapter(contacts, object : OnItemClickListener {
-                override fun onClick(position: Int) {
-                    // получаем выбранный пункт
-                    val selectedContact = contacts[position]
+
+            adapter.attachListener(object : OnContactClickListener {
+                override fun onClick(contact: PhoneBook) {
+
                     Toast.makeText(
-                        context, "Был выбран пункт " + selectedContact.getName(),
+                        context, "Был выбран пункт " + contact.getName(),
                         Toast.LENGTH_SHORT
                     ).show()
                     val intent = Intent(activity, DetailActivity::class.java)
-                    intent.putExtra(EXTRA_NAME, selectedContact.getName())
-                    intent.putExtra(EXTRA_NUMBER, selectedContact.getNumber())
-                    intent.putExtra(EXTRA_ICON, selectedContact.getIcon())
+                    intent.putExtra(EXTRA_NAME, contact.getName())
+                    intent.putExtra(EXTRA_NUMBER, contact.getNumber())
+                    intent.putExtra(EXTRA_ICON, contact.getIcon())
                     startActivity(intent)
                 }
+
             })
+            adapter.setData(contacts)
             contactsList.adapter = adapter
         }
     }
@@ -142,7 +145,7 @@ class CallLogFragment : Fragment(), CallLogView {
             ) != PackageManager.PERMISSION_GRANTED)
         ) {
             Log.d(Thread.currentThread().name, "onResume")
-             showContacts()
+            showContacts()
         }
     }
 }

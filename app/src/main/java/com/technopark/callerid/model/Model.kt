@@ -6,6 +6,9 @@ import com.technopark.callerid.model.room.Spamer
 import com.technopark.callerid.view.ui.callLog.PhoneBook
 import me.everything.providers.android.calllog.Call
 import me.everything.providers.android.calllog.CallsProvider
+import java.text.SimpleDateFormat
+import java.util.*
+
 
 class Model {
 
@@ -15,30 +18,37 @@ class Model {
     fun setPhoneBooks(context: Context?) {
         phoneBooks.clear()
 
-        val contacts = arrayListOf<String>()
-        val names = arrayListOf<String>()
-        val types = arrayListOf<Call.CallType>()
-
         val callsProvider = CallsProvider(context)
         val number: List<Call> = callsProvider.calls.list
+
         val numberSize: Int = number.size.coerceAtMost(25)
         for (i in 0 until numberSize) {
-            contacts.add(number[i].number)
-            names.add(number[i].name)
-            types.add(number[i].type)
+            val timeList = parseDate(number[i])
+
+
             val callTypeImage: Int = try {
-                determineType(types[i], contacts[i])
+                determineType(number[i].type, number[i].number)
             } catch (e: Exception) {
                 0
             }
             phoneBooks.add(
                 PhoneBook(
                     callTypeImage,
-                    if (names[i] == null) "Unknown Number" else names[i],
-                    contacts[i]
+                    number[i].name ?: "Unknown Number",
+                    number[i].number, timeList
                 )
             )
         }
+    }
+
+    private fun parseDate(number: Call): List<String> {
+        val seconds = number.callDate
+        val date = Date(seconds)
+        val simpleDateFormat = SimpleDateFormat("EEEE MMMM d yyyy h:mm", Locale.ENGLISH)
+
+        simpleDateFormat.timeZone = TimeZone.getTimeZone("GMT")
+        val dateString = simpleDateFormat.format(date)
+        return dateString.split(" ")
     }
 
     fun getPhoneBooks(): ArrayList<PhoneBook> = phoneBooks

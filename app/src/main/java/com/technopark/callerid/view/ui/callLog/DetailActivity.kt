@@ -16,6 +16,9 @@ import com.technopark.callerid.presenter.DetailPresenter
 import com.technopark.callerid.view.ui.callLog.CallLogFragment.Companion.EXTRA_ICON
 import com.technopark.callerid.view.ui.callLog.CallLogFragment.Companion.EXTRA_NAME
 import com.technopark.callerid.view.ui.callLog.CallLogFragment.Companion.EXTRA_NUMBER
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class DetailActivity : AppCompatActivity(), DetailView {
 
@@ -48,10 +51,13 @@ class DetailActivity : AppCompatActivity(), DetailView {
             thisIsSpamBtn.setText(R.string.this_is_spam)
         }
         thisIsSpamBtn.setOnClickListener {
-            if (thisIsSpamBtn.text == resources.getString(R.string.this_is_spam)) {
-                detailPresenter.addRecord(numberView.text.toString(), true, "From CallLog")
-            } else {
-                detailPresenter.removeRecord(numberView.text.toString())
+            GlobalScope.launch(Dispatchers.IO) {
+                if (thisIsSpamBtn.text == resources.getString(R.string.this_is_spam)) {
+
+                    detailPresenter.addRecord(numberView.text.toString(), true, "From CallLog")
+                } else {
+                    detailPresenter.removeRecord(numberView.text.toString())
+                }
             }
         }
     }
@@ -81,12 +87,16 @@ class DetailActivity : AppCompatActivity(), DetailView {
     }
 
     override fun addSuccessful() {
-        Toast.makeText(applicationContext, "Spamer is added", Toast.LENGTH_LONG).show()
-        thisIsSpamBtn.setText(R.string.this_is_not_spam)
+        GlobalScope.launch(Dispatchers.Main) {
+            Toast.makeText(applicationContext, "Spamer is added", Toast.LENGTH_LONG).show()
+            thisIsSpamBtn.setText(R.string.this_is_not_spam)
+        }
     }
 
     override fun removeSuccessful() {
-        Toast.makeText(applicationContext, "Spamer is deleted", Toast.LENGTH_LONG).show()
-        thisIsSpamBtn.setText(R.string.this_is_spam)
+        GlobalScope.launch(Dispatchers.Main) {
+            Toast.makeText(applicationContext, "Spamer is deleted", Toast.LENGTH_LONG).show()
+            thisIsSpamBtn.setText(R.string.this_is_spam)
+        }
     }
 }

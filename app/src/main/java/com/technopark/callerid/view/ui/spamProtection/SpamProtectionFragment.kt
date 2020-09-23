@@ -17,7 +17,6 @@ import com.technopark.callerid.R
 import com.technopark.callerid.model.room.Spamer
 import com.technopark.callerid.presenter.SpamProtectionPresenter
 import com.technopark.callerid.view.ui.callLog.DetailActivity.Companion.EXTRA
-import com.technopark.callerid.view.ui.callLog.OnItemClickListener
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -114,7 +113,8 @@ class SpamProtectionFragment : Fragment(), SpamProtectionView {
                 DividerItemDecoration.VERTICAL
             )
             spamList.addItemDecoration(mDividerItemDecoration)
-            adapter = SpamAdapter(spamers, object : OnItemClickListener {
+            adapter = SpamAdapter(spamers, object :
+                OnSpamerClickListener {
                 override fun onClick(position: Int) {
                     Toast.makeText(context, spamers[position].phoneNumber, Toast.LENGTH_SHORT)
                         .show()
