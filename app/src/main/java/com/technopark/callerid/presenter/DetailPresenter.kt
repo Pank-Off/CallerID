@@ -5,7 +5,7 @@ import com.technopark.callerid.model.Model
 import com.technopark.callerid.view.ui.callLog.DetailView
 import javax.inject.Inject
 
-class DetailPresenter(var detailView: DetailView) {
+class DetailPresenter(private var detailView: DetailView) {
 
     init {
         App.getAppComponent().inject(this)
