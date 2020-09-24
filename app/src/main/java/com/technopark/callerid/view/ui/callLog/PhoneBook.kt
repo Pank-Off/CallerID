@@ -6,10 +6,8 @@ class PhoneBook(
     private var number: String,
     private var timeList: List<String>
 ) {
-
     fun getName() = name
     fun getIcon() = icon
     fun getNumber(): String = number
     fun getDate(): List<String> = timeList
-
 }

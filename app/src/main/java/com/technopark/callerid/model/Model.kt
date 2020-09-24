@@ -44,9 +44,9 @@ class Model {
     private fun parseDate(number: Call): List<String> {
         val seconds = number.callDate
         val date = Date(seconds)
-        val simpleDateFormat = SimpleDateFormat("EEEE MMMM d yyyy h:mm", Locale.ENGLISH)
+        val simpleDateFormat = SimpleDateFormat("EEEE MMMM d yyyy H:mm", Locale.ENGLISH)
 
-        simpleDateFormat.timeZone = TimeZone.getTimeZone("GMT")
+        simpleDateFormat.timeZone = TimeZone.getTimeZone("Europe/Moscow")
         val dateString = simpleDateFormat.format(date)
         return dateString.split(" ")
     }

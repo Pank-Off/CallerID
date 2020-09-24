@@ -30,17 +30,18 @@ class CallLogFragment : Fragment(), CallLogView {
     private val adapter = PhoneAdapter()
     private lateinit var mDividerItemDecoration: DividerItemDecoration
     private lateinit var oops: TextView
-    private lateinit var sad_emotion: ImageView
+    private lateinit var sadEmotion: ImageView
     private lateinit var allowBtn: Button
-
-    companion object {
-        val EXTRA_NUMBER = "EXTRA_NUMBER"
-        val EXTRA_NAME = "EXTRA_NAME"
-        val EXTRA_ICON = "EXTRA_ICON"
-    }
 
     // Request code for READ_CALL_LOG. It can be any number > 0.
     private val PERMISSIONS_REQUEST_READ_CALL_LOG = 100
+
+    companion object {
+        const val EXTRA_NUMBER = "EXTRA_NUMBER"
+        const val EXTRA_NAME = "EXTRA_NAME"
+        const val EXTRA_ICON = "EXTRA_ICON"
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -66,7 +67,7 @@ class CallLogFragment : Fragment(), CallLogView {
     private fun initViews(view: View) {
         contactsList = view.findViewById(R.id.contacts_list)
         oops = view.findViewById(R.id.notAllowPermission)
-        sad_emotion = view.findViewById(R.id.sad_emotion)
+        sadEmotion = view.findViewById(R.id.sad_emotion)
         allowBtn = view.findViewById(R.id.allowBtn)
     }
 
@@ -127,12 +128,12 @@ class CallLogFragment : Fragment(), CallLogView {
             if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 // Permission is granted
                 allowBtn.visibility = View.INVISIBLE
-                sad_emotion.visibility = View.INVISIBLE
+                sadEmotion.visibility = View.INVISIBLE
                 oops.visibility = View.INVISIBLE
                 showContacts()
             } else {
                 oops.text = getString(R.string.oops_text)
-                sad_emotion.setImageResource(R.drawable.sad_emotion)
+                sadEmotion.setImageResource(R.drawable.sad_emotion)
                 allowBtn.visibility = View.VISIBLE
             }
         }
