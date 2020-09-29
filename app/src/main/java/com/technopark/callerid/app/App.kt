@@ -5,6 +5,8 @@ import android.content.SharedPreferences
 import androidx.room.Room
 import com.technopark.callerid.model.FirebaseWorker
 import com.technopark.callerid.model.room.AppDatabase
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.async
 import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.*
@@ -66,7 +68,6 @@ class App : Application() {
             sharedPreferences.edit().putBoolean("firstRun", false).apply()
             firebaseWorker = FirebaseWorker(applicationContext)
             firebaseWorker.download()
-
             sharedPreferences.edit().putString(dateTimeKey, currentDate).apply()
             sharedPreferences.edit().apply()
         } else {

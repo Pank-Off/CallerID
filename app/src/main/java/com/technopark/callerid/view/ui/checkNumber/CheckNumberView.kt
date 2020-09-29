@@ -5,4 +5,5 @@ interface CheckNumberView {
     fun validNumber()
     fun invalidNumber()
     fun isSpam(isSpam: String)
+    fun areUpdateDB(areUpdate: Boolean)
 }

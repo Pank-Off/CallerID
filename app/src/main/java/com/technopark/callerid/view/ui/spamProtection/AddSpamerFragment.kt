@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.textfield.TextInputEditText
 import com.technopark.callerid.R
 import com.technopark.callerid.presenter.AddNumberPresenter
+import com.technopark.callerid.presenter.EditNumberPresenter
 import com.technopark.callerid.view.ui.callLog.DetailActivity.Companion.EXTRA
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -24,6 +25,8 @@ class AddSpamerFragment : Fragment(), AddNumberView {
     private lateinit var comment: TextInputEditText
     private lateinit var correctPhone: String
     private lateinit var oldNumber: String
+
+    //private  var  newNumber:String? = null
     private var validNumber: Boolean = false
 
 
@@ -87,7 +90,9 @@ class AddSpamerFragment : Fragment(), AddNumberView {
                 if (validNumber) {
                     val newComment = getComment()
                     if (oldNumber != null) {
-                        addNumberPresenter.replaceRecord(oldNumber, correctPhone, newComment)
+                        GlobalScope.launch(Dispatchers.IO) {
+                            addNumberPresenter.replaceRecord(oldNumber, correctPhone, newComment)
+                        }
                     }
                 }
             } else {
@@ -128,6 +133,7 @@ class AddSpamerFragment : Fragment(), AddNumberView {
     override fun validNumber() {
         numberOfPhoneEditText.error = null
         validNumber = true
+        //correctPhone = newNumber
     }
 
     override fun invalidNumber() {
@@ -148,8 +154,10 @@ class AddSpamerFragment : Fragment(), AddNumberView {
     }
 
     override fun replaceSuccessful() {
-        Toast.makeText(context, "Replace", Toast.LENGTH_LONG).show()
-        requireActivity().finish()
+        GlobalScope.launch(Dispatchers.Main) {
+            Toast.makeText(context, "Replace", Toast.LENGTH_LONG).show()
+            requireActivity().finish()
+        }
     }
 
 }

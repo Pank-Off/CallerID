@@ -1,10 +1,12 @@
 package com.technopark.callerid.presenter
 
+import android.content.Context
 import android.util.Log
 import com.google.i18n.phonenumbers.NumberParseException
 import com.google.i18n.phonenumbers.PhoneNumberUtil
 import com.google.i18n.phonenumbers.Phonenumber
 import com.technopark.callerid.app.App
+import com.technopark.callerid.model.FirebaseWorker
 import com.technopark.callerid.model.Model
 import com.technopark.callerid.view.ui.checkNumber.CheckNumberView
 import javax.inject.Inject
@@ -44,5 +46,11 @@ class CheckNumberPresenter(private var checkNumberView: CheckNumberView) {
         Log.d(Thread.currentThread().name, isSpam)
         model.getAllData()
         checkNumberView.isSpam(isSpam)
+    }
+
+    fun downloadDBFromfireBase(context: Context?) {
+        val areUpdate = model.getDBFromfireBase(context)
+        Log.e(javaClass.simpleName + " areUpdate", areUpdate.toString())
+        checkNumberView.areUpdateDB(areUpdate)
     }
 }
