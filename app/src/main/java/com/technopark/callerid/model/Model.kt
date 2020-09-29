@@ -1,6 +1,7 @@
 package com.technopark.callerid.model
 
 import android.content.Context
+import android.util.Log
 import com.technopark.callerid.R
 import com.technopark.callerid.model.room.Spamer
 import com.technopark.callerid.view.ui.callLog.PhoneBook
@@ -14,6 +15,7 @@ class Model {
 
     private val phoneBooks = arrayListOf<PhoneBook>()
     private val mDatabaseHelper: DatabaseHelper = DatabaseHelper()
+    private lateinit var fireBaseWorker: FirebaseWorker
 
     fun setPhoneBooks(context: Context?) {
         phoneBooks.clear()
@@ -74,8 +76,8 @@ class Model {
         mDatabaseHelper.removeRecord(number)
     }
 
-    fun replaceRecord(oldNumber: String, correctPhone: String, newComment: String) {
-        mDatabaseHelper.replaceRecord(oldNumber, correctPhone, newComment)
+    fun replaceRecord(correctPhone: String, newComment: String) {
+        mDatabaseHelper.replaceRecord(correctPhone, newComment)
     }
 
     fun getAllData(): List<Spamer> {
@@ -84,5 +86,12 @@ class Model {
 
     fun getSingleUserInfo(number: String): String {
         return mDatabaseHelper.getSingleUserInfo(number)
+    }
+
+    fun getDBFromfireBase(context: Context?): Boolean {
+        fireBaseWorker = FirebaseWorker(context)
+        val areUpdate = fireBaseWorker.download()
+        Log.e(javaClass.simpleName + " areUpdate", areUpdate.toString())
+        return areUpdate
     }
 }

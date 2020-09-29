@@ -12,7 +12,6 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 import com.technopark.callerid.R
-import com.technopark.callerid.model.FirebaseWorker
 import com.technopark.callerid.presenter.CheckNumberPresenter
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -26,7 +25,6 @@ class CheckNumberFragment : Fragment(), CheckNumberView {
     private lateinit var isSpamTextfield: TextView
     private var validNumber: Boolean = false
     private lateinit var updateDB: MaterialButton
-    private lateinit var fireBaseWorker: FirebaseWorker
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -71,19 +69,9 @@ class CheckNumberFragment : Fragment(), CheckNumberView {
 
     private fun setOnUpdateDBClickListener() {
         updateDB.setOnClickListener {
-            var areUpdate: Boolean = false
-            fireBaseWorker = FirebaseWorker(appContext)
             Toast.makeText(context, "DataBase are updating...", Toast.LENGTH_LONG).show()
             GlobalScope.launch(Dispatchers.IO) {
-                areUpdate = fireBaseWorker.download()
-                Log.d(Thread.currentThread().name, "Coroutine")
-            }
-
-            Log.d(Thread.currentThread().name, "Coroutine")
-            if (areUpdate) {
-                //   Toast.makeText(context, "DataBase is updated", Toast.LENGTH_SHORT).show();
-            } else {
-                // Toast.makeText(context, "DataBase is not updated", Toast.LENGTH_SHORT).show();
+                checkNumberPresenter.downloadDBFromfireBase(context)
             }
         }
     }
@@ -101,6 +89,17 @@ class CheckNumberFragment : Fragment(), CheckNumberView {
     override fun isSpam(isSpam: String) {
         GlobalScope.launch(Dispatchers.Main) {
             isSpamTextfield.text = isSpam
+        }
+    }
+
+    override fun areUpdateDB(areUpdate: Boolean) {
+        Log.e(javaClass.simpleName + " areUpdate", areUpdate.toString())
+        GlobalScope.launch(Dispatchers.Main) {
+            if (areUpdate) {
+                Toast.makeText(context, "DataBase is updated", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(context, "DataBase is not updated", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 }

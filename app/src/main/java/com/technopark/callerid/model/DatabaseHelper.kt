@@ -101,8 +101,17 @@ class DatabaseHelper() {
                     })
     }
 
-    fun replaceRecord(oldNumber: String, correctPhone: String, newComment: String) {
+    fun replaceRecord(correctPhone: String, newComment: String) {
         Log.d(javaClass.simpleName, "replaceRecord")
+        val spamer = Spamer(correctPhone, true, newComment)
+        val disposable: Disposable =
+            spamerDao.update(spamer).subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread()).subscribe({ id ->
+                    Log.d(Thread.currentThread().name, id.toString())
+                },
+                    { throwable ->
+                        Log.d(Thread.currentThread().name, throwable.toString())
+                    })
     }
 }
 

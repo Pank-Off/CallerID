@@ -2,11 +2,10 @@ package com.technopark.callerid.presenter
 
 import com.technopark.callerid.app.App
 import com.technopark.callerid.model.Model
-import com.technopark.callerid.view.ui.callLog.DetailView
+import com.technopark.callerid.view.ui.spamProtection.EditNumberView
 import javax.inject.Inject
 
-class DetailPresenter(private var detailView: DetailView) {
-
+class EditNumberPresenter(private var editNumberView: EditNumberView) {
     init {
         App.getAppComponent().inject(this)
     }
@@ -14,13 +13,8 @@ class DetailPresenter(private var detailView: DetailView) {
     @Inject
     lateinit var model: Model
 
-    fun addRecord(number: String, isSpam: Boolean, comment: String) {
-        model.addRecord(number, isSpam, comment)
-        detailView.addSuccessful()
-    }
-
     fun removeRecord(number: String) {
         model.removeRecord(number)
-        detailView.removeSuccessful()
+        editNumberView.removeSuccessful()
     }
 }

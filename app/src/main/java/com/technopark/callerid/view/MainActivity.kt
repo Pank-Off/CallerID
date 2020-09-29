@@ -1,10 +1,13 @@
 package com.technopark.callerid.view
 
+import android.content.ContentValues
 import android.content.Context
 import android.content.SharedPreferences
 import android.graphics.drawable.ColorDrawable
 import android.os.Build
 import android.os.Bundle
+import android.provider.BlockedNumberContract.BlockedNumbers
+import android.telecom.TelecomManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.navigation.NavController
@@ -14,11 +17,6 @@ import androidx.navigation.ui.NavigationUI
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.technopark.callerid.R
 import com.technopark.callerid.view.ui.settings.SettingsFragment
-import androidx.core.content.ContextCompat.getSystemService
-import android.provider.BlockedNumberContract.BlockedNumbers
-import android.telecom.TelecomManager
-import android.net.Uri
-import android.content.ContentValues
 
 
 class MainActivity : AppCompatActivity() {
@@ -65,7 +63,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun blockNumber() {
         //val c: Context = this
-        val t:TelecomManager? = getSystemService(Context.TELECOM_SERVICE) as TelecomManager?
+        val t: TelecomManager? = getSystemService(Context.TELECOM_SERVICE) as TelecomManager?
         //c.startActivity(t.createManageBlockedNumbersIntent(), null);
         val values = ContentValues()
         values.put(BlockedNumbers.COLUMN_ORIGINAL_NUMBER, "+79152274034")

@@ -49,8 +49,8 @@ class AddNumberPresenter(private var addNumberView: AddNumberView) {
         }
     }
 
-    fun replaceRecord(oldNumber: String, correctPhone: String, newComment: String) {
-        model.replaceRecord(oldNumber, correctPhone, newComment)
+    fun replaceRecord(correctPhone: String, newComment: String) {
+        model.replaceRecord(correctPhone, newComment)
         addNumberView.replaceSuccessful()
     }
 }
