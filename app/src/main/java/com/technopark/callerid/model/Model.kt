@@ -76,8 +76,8 @@ class Model {
         mDatabaseHelper.removeRecord(number)
     }
 
-    fun replaceRecord(oldNumber: String, correctPhone: String, newComment: String) {
-        mDatabaseHelper.replaceRecord(oldNumber, correctPhone, newComment)
+    fun replaceRecord(correctPhone: String, newComment: String) {
+        mDatabaseHelper.replaceRecord(correctPhone, newComment)
     }
 
     fun getAllData(): List<Spamer> {

@@ -1,6 +1,7 @@
 package com.technopark.callerid.view.ui.spamProtection
 
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -26,7 +27,7 @@ class AddSpamerFragment : Fragment(), AddNumberView {
     private lateinit var correctPhone: String
     private lateinit var oldNumber: String
 
-    //private  var  newNumber:String? = null
+    private  var newNumber:String=""
     private var validNumber: Boolean = false
 
 
@@ -85,13 +86,14 @@ class AddSpamerFragment : Fragment(), AddNumberView {
         if (R.id.action_save == item.itemId) {
             if (Objects.requireNonNull(numberOfPhoneEditText.text).toString() != "") {
                 val oldNumber = arguments?.getString(EXTRA)
-                val newNumber = numberOfPhoneEditText.text.toString()
+                newNumber = numberOfPhoneEditText.text.toString()
                 addNumberPresenter.checkValidNumber(newNumber)
                 if (validNumber) {
                     val newComment = getComment()
+                    Log.e("newComment",newComment)
                     if (oldNumber != null) {
                         GlobalScope.launch(Dispatchers.IO) {
-                            addNumberPresenter.replaceRecord(oldNumber, correctPhone, newComment)
+                            addNumberPresenter.replaceRecord(correctPhone, newComment)
                         }
                     }
                 }
@@ -133,7 +135,7 @@ class AddSpamerFragment : Fragment(), AddNumberView {
     override fun validNumber() {
         numberOfPhoneEditText.error = null
         validNumber = true
-        //correctPhone = newNumber
+        correctPhone = newNumber
     }
 
     override fun invalidNumber() {

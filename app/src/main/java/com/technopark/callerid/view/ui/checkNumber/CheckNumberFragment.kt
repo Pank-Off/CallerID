@@ -12,7 +12,6 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 import com.technopark.callerid.R
-import com.technopark.callerid.model.FirebaseWorker
 import com.technopark.callerid.presenter.CheckNumberPresenter
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -26,7 +25,6 @@ class CheckNumberFragment : Fragment(), CheckNumberView {
     private lateinit var isSpamTextfield: TextView
     private var validNumber: Boolean = false
     private lateinit var updateDB: MaterialButton
-    //private lateinit var fireBaseWorker: FirebaseWorker
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -98,9 +96,9 @@ class CheckNumberFragment : Fragment(), CheckNumberView {
         Log.e(javaClass.simpleName + " areUpdate", areUpdate.toString())
         GlobalScope.launch(Dispatchers.Main) {
             if (areUpdate) {
-                Toast.makeText(context, "DataBase is updated", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "DataBase is updated", Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(context, "DataBase is not updated", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "DataBase is not updated", Toast.LENGTH_SHORT).show()
             }
         }
     }

@@ -19,4 +19,7 @@ interface SpamerDao {
     @Query("SELECT * FROM table_spamers WHERE phoneNumber = :phoneNumber")
     fun getSingleUserInfo(phoneNumber: String): Cursor
 
+    @Update
+    fun update(spamer: Spamer):Single<Int>
+
 }
