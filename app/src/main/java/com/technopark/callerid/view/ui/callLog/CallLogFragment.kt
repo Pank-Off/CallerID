@@ -27,19 +27,21 @@ class CallLogFragment : Fragment(), CallLogView {
 
     private lateinit var callLogPresenter: CallLogPresenter
     private lateinit var contactsList: RecyclerView
+    private val adapter = PhoneAdapter()
     private lateinit var mDividerItemDecoration: DividerItemDecoration
     private lateinit var oops: TextView
-    private lateinit var sad_emotion: ImageView
+    private lateinit var sadEmotion: ImageView
     private lateinit var allowBtn: Button
-
-    companion object {
-        val EXTRA_NUMBER = "EXTRA_NUMBER"
-        val EXTRA_NAME = "EXTRA_NAME"
-        val EXTRA_ICON = "EXTRA_ICON"
-    }
 
     // Request code for READ_CALL_LOG. It can be any number > 0.
     private val PERMISSIONS_REQUEST_READ_CALL_LOG = 100
+
+    companion object {
+        const val EXTRA_NUMBER = "EXTRA_NUMBER"
+        const val EXTRA_NAME = "EXTRA_NAME"
+        const val EXTRA_ICON = "EXTRA_ICON"
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -59,13 +61,13 @@ class CallLogFragment : Fragment(), CallLogView {
                 startActivity(intent)
             }
         }
-       // showContacts()
+        // showContacts()
     }
 
     private fun initViews(view: View) {
         contactsList = view.findViewById(R.id.contacts_list)
         oops = view.findViewById(R.id.notAllowPermission)
-        sad_emotion = view.findViewById(R.id.sad_emotion)
+        sadEmotion = view.findViewById(R.id.sad_emotion)
         allowBtn = view.findViewById(R.id.allowBtn)
     }
 
@@ -97,21 +99,23 @@ class CallLogFragment : Fragment(), CallLogView {
             )
             Log.d("Coroutine", Thread.currentThread().name)
             contactsList.addItemDecoration(mDividerItemDecoration)
-            val adapter = PhoneAdapter(contacts, object : OnItemClickListener {
-                override fun onClick(position: Int) {
-                    // получаем выбранный пункт
-                    val selectedContact = contacts[position]
+
+            adapter.attachListener(object : OnContactClickListener {
+                override fun onClick(contact: PhoneBook) {
+
                     Toast.makeText(
-                        context, "Был выбран пункт " + selectedContact.getName(),
+                        context, "Был выбран пункт " + contact.getName(),
                         Toast.LENGTH_SHORT
                     ).show()
                     val intent = Intent(activity, DetailActivity::class.java)
-                    intent.putExtra(EXTRA_NAME, selectedContact.getName())
-                    intent.putExtra(EXTRA_NUMBER, selectedContact.getNumber())
-                    intent.putExtra(EXTRA_ICON, selectedContact.getIcon())
+                    intent.putExtra(EXTRA_NAME, contact.getName())
+                    intent.putExtra(EXTRA_NUMBER, contact.getNumber())
+                    intent.putExtra(EXTRA_ICON, contact.getIcon())
                     startActivity(intent)
                 }
+
             })
+            adapter.setData(contacts)
             contactsList.adapter = adapter
         }
     }
@@ -124,12 +128,12 @@ class CallLogFragment : Fragment(), CallLogView {
             if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 // Permission is granted
                 allowBtn.visibility = View.INVISIBLE
-                sad_emotion.visibility = View.INVISIBLE
+                sadEmotion.visibility = View.INVISIBLE
                 oops.visibility = View.INVISIBLE
                 showContacts()
             } else {
                 oops.text = getString(R.string.oops_text)
-                sad_emotion.setImageResource(R.drawable.sad_emotion)
+                sadEmotion.setImageResource(R.drawable.sad_emotion)
                 allowBtn.visibility = View.VISIBLE
             }
         }
@@ -142,7 +146,7 @@ class CallLogFragment : Fragment(), CallLogView {
             ) != PackageManager.PERMISSION_GRANTED)
         ) {
             Log.d(Thread.currentThread().name, "onResume")
-             showContacts()
+            showContacts()
         }
     }
 }

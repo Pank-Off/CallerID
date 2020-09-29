@@ -1,6 +1,5 @@
 package com.technopark.callerid.view.ui.spamProtection
 
-import android.content.Context
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -9,21 +8,17 @@ import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
 import com.technopark.callerid.R
 import com.technopark.callerid.model.room.Spamer
-import com.technopark.callerid.view.ui.callLog.OnItemClickListener
-import java.io.UncheckedIOException
 import java.util.*
 import kotlin.collections.ArrayList
 
 class SpamAdapter(
     private var spamerList: List<Spamer>,
-
-    private var onItemClickListener: OnItemClickListener
+    private var onSpamerClickListener: OnSpamerClickListener
 ) : RecyclerView.Adapter<SpamAdapter.ViewHolder>(), Filterable {
 
-    private lateinit var context: Context
     private var spamerListFiltered: List<Spamer> = spamerList
 
-    class ViewHolder(itemView: View, val listener: OnItemClickListener) :
+    class ViewHolder(itemView: View, val listener: OnSpamerClickListener) :
         RecyclerView.ViewHolder(itemView) {
 
         val flagView: ImageView = itemView.findViewById(R.id.phone)
@@ -32,15 +27,10 @@ class SpamAdapter(
         val oneItemView: LinearLayout = itemView.findViewById(R.id.item)
     }
 
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        context = parent.context
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_third_activity, parent, false)
-        return ViewHolder(
-            view,
-            onItemClickListener
-        )
+        return ViewHolder(view, onSpamerClickListener)
     }
 
     override fun getItemCount(): Int {
