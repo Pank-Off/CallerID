@@ -1,5 +1,6 @@
 package com.technopark.callerid.view.ui.checkNumber
 
+import android.app.NotificationManager
 import android.content.Context
 import android.os.Bundle
 import android.util.Log
@@ -8,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.app.NotificationCompat
 import androidx.fragment.app.Fragment
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
@@ -17,6 +19,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
+
 class CheckNumberFragment : Fragment(), CheckNumberView {
     private lateinit var appContext: Context
     private lateinit var checkNumberPresenter: CheckNumberPresenter
@@ -25,6 +28,7 @@ class CheckNumberFragment : Fragment(), CheckNumberView {
     private lateinit var isSpamTextfield: TextView
     private var validNumber: Boolean = false
     private lateinit var updateDB: MaterialButton
+    private var messageId = 1000
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -98,8 +102,21 @@ class CheckNumberFragment : Fragment(), CheckNumberView {
             if (areUpdate) {
                 Toast.makeText(context, "DataBase is updated", Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(context, "DataBase is not updated", Toast.LENGTH_SHORT).show()
+                createNotification()
             }
         }
+    }
+
+    private fun createNotification() {
+        val builder = context?.let {
+            NotificationCompat.Builder(it, "2")
+                .setSmallIcon(R.mipmap.ic_launcher)
+                .setContentTitle("DataBase is not update")
+                .setContentText("Check your connection")
+        }
+        val notificationManager =
+            context?.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+        notificationManager.notify(messageId++, builder?.build())
+
     }
 }
